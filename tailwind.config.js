@@ -5,9 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-        backgroundImage: {
-          // 'hero': "url('./src/images/home_heroimage 1.png')",
-        },
+      fontFamily: {
+        "avenir": ['Avenir', 'system-ui', 'arial'],
+        "souvenir": ['souvenir', 'arial']
+      }
     },
   },
   plugins: [],

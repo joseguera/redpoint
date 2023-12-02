@@ -93,6 +93,11 @@ export default function Home() {
           gif
         </div>
       </div>
+      <div className="text-center">
+        <h2 className="text-[45px] font-souvenir font-normal">What's in Your Airbnb</h2>
+        <p>Our vacation Airbnb provides everything you need for a comfortable stay. <span className="text-[#D33F3F] font-bold">View Gallery</span></p>
+        <div className="flex flex-row"></div>
+      </div>
       {/* 
       // SECTION TEMPLATE
       <div className="text-center bg-white">

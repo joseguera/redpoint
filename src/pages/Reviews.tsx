@@ -1,13 +1,12 @@
 import React from 'react';
+import { userReviews } from '../utils';
 import PageHeros from '../components/PageHeros';
 import ReviewEntry from '../components/ReviewEntry';
 import FooterHero from '../components/FooterHero';
 
 
 export default function Reviews() {
-  const reviews = [
-    { name: "", location: "", image: "", rating: "", reviewDate: "", reviewPost: "" }
-  ]
+
   return (
     <div>
       <PageHeros heroImage='reviews-hero' />
@@ -50,8 +49,10 @@ export default function Reviews() {
           <div>17 Reviews</div>
           <input />
           <div>
-            {/* Map through array of reviews passing props to ReviewEntry */}
-            <ReviewEntry />
+            {userReviews.map(user => {
+              return <ReviewEntry user={user} />
+
+            })}
           </div>
           <div>{`< 1 2 >`}</div>
         </div>

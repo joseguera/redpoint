@@ -1,8 +1,8 @@
 import React from "react";
 import quotes from "../images/quotes.svg";
 import rating from "../images/rating_stars.svg";
-import olivia from "../images/avatar1.png";
-import yifan from "../images/avatar2.png";
+import olivia from "../images/user-avatars/olivia.png";
+import yifan from "../images/user-avatars/yifan.png";
 
 export default function HomeGuestStories() {
   const users = [

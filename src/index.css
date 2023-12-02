@@ -24,6 +24,10 @@ html, body {
   color: #272728;
 }
 
+input {
+  all: unset;
+}
+
 /* Page Heros */
 
 .hero {

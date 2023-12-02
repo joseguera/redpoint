@@ -240,7 +240,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col"></div>
         </div>
-        <button className="w-[240px] h-[61px] border border-[#272728]">Show all 36 amenities</button>
+        <button className="w-[240px] h-[61px] bg-white border border-[#272728]">Show all 36 amenities</button>
       </div>
       {/* HOW TO BOOK REDPOINT */}
       <FooterHero image="home-footer" title="How to Book Redpoint" description="Click the button below to begin your memorable experience at Redpoint!" />

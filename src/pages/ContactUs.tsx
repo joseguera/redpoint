@@ -39,11 +39,11 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="flex flex-row justify-between items-center">
-          <button className="w-[240px] h-[61px] border border-[#272728] text-[16px] font-black">
+          <button className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3">
             <img src={email} className="w-[18px] h-[14px]" alt="email" />
             Email us now
           </button>
-          <button className="w-[240px] h-[61px] border border-[#272728] text-[16px] font-black">
+          <button className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3">
             <img src={instagram} className="w-[18px]" alt="instagram" />
             Visit instagram
           </button>

@@ -3,49 +3,89 @@ import { userReviews } from '../utils';
 import PageHeros from '../components/PageHeros';
 import ReviewEntry from '../components/ReviewEntry';
 import FooterHero from '../components/FooterHero';
+import view from '../images/icons/link-out_svgrepo.com.svg';
+import cleanliness from "../images/icons/clean_svgrepo.com.svg";
+import accuracy from "../images/icons/fact-check_svgrepo.com.svg";
+import check_in from "../images/icons/key-alt_svgrepo.com.svg";
+import communication from "../images/icons/communication-bubble-chat-comment-talk-speech-icon_svgrepo.com.svg";
+import location from "../images/icons/location-pin_svgrepo.com.svg";
+import value from "../images/icons/price-tag-price_svgrepo.com.svg";
+import wing1 from '../images/wing1.svg';
+import wing2 from '../images/wing2.svg';
 
 
 export default function Reviews() {
 
+  const scores = [
+    { icon: cleanliness, category: "Cleanliness", rating: 4.9 },
+    { icon: accuracy, category: "Accuracy", rating: 5.0 },
+    { icon: check_in, category: "Check-in", rating: 4.9 },
+    { icon: communication, category: "Communication", rating: 5.0 },
+    { icon: location, category: "Location", rating: 4.9 },
+    { icon: value, category: "Value", rating: 4.9 }
+  ];
+
+  const overallRatings = [
+    { ratingCategory: 5, ratingTotal: "w-4/5"  },
+    { ratingCategory: 4, ratingTotal: "w-1/5"  },
+    { ratingCategory: 3, ratingTotal: "w-3/5"  },
+    { ratingCategory: 2, ratingTotal: "w-2/5"  },
+    { ratingCategory: 1, ratingTotal: "w-0"  },
+  ];
+
   return (
-    <div>
+    <div className='flex flex-col w-screen'>
       <PageHeros heroImage='reviews-hero' />
-      <div id="content">
+      <div id="content" className='flex flex-col items-center'>
           <h2 className="text-[45px] font-souvenir">Reviews</h2>
           <p>
             See what our guests are saying.
           </p>
       </div> 
        {/* REVIEWS HOLDER */}
-       <div>
+       <div className='flex flex-row items-start justify-center gap-24'>
         {/* COL 1 */}
-          <div>
-            <div>4.94</div>
-            <div>
-              <h3>Guest Favorite</h3>
-              <p>See what our guests are saying.</p>
+          <div className='flex flex-col items-center w-[310px] gap-6'>
+            <div className='flex flex-row items-center gap-2'>
+              <img src={wing1} alt="wing" className='w-[53.65px] h-[54.85px]' />
+              <p className='text-[65px] text-[#272728] font-extrabold'>4.94</p>
+              <img src={wing2} alt="wing" className='w-[53.65px] h-[54.85px]' />
             </div>
-            <div><p>icon</p> View all reviews</div>
-            <div>
-              Overall Rating
-              <div>5</div>
-              <div>4</div>
-              <div>3</div>
-              <div>2</div>
-              <div>1</div>
+            <div className='flex flex-col items-center gap-2'>
+              <h3 className='text-[16px] font-extrabold'>Guest Favorite</h3>
+              <p className='text-[#717171] text-[16px] text-center'>One of the most loved homes on Airbnb based on ratings, reviews, and reliability</p>
+            </div>
+            <button className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3">
+              <img src={view} className="w-[16px]" alt="view all" />
+              <p>View all reviews</p>
+            </button>
+            <div className='flex flex-col items-center gap-2'>
+              <p className='font-extrabold'>Overall Rating</p>
+              {overallRatings.map(rating => {
+                return (
+                  <div className='flex flex-row items-center gap-2'>
+                    <div className='text-[#9393B0] text-[16px]'>{rating.ratingCategory}</div>
+                    <div id="outer-bar" className='w-[245px] h-[4px] bg-[#D9D9D9] rounded-sm'>
+                      <div id="inner-bar" className={`${rating.ratingTotal} h-full bg-[#272728] rounded-sm`}></div>
+                    </div>
+                  </div>
+                )})}
             </div>
             <div>
-              <div>
-                <div>
-                  <div>icon</div>
-                  <div>text</div>
-                </div>
-                <div>Score</div>
-              </div>
+              {scores.map(score => {
+                return (
+                  <div key={score.category} className='w-[279px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]'>
+                    <div className='flex -flex-row justify-between gap-4 items-center'>
+                      <div className="w-6 h-6"><img src={score.icon} alt={score.category} /></div>
+                      <div className='text-[16px]'>{score.category}</div>
+                    </div>
+                    <div className='text-[16px] flex items-center'>{score.rating}</div>
+                  </div>
+                )})}
             </div>
           </div>
         {/* COL 2 */}
-        <div>
+        <div className='flex flex-col items-start w-[744px]'>
           <div>17 Reviews</div>
           <input />
           <div>

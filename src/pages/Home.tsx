@@ -1,5 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import HomeCard from "../components/HomeCard";
+import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
+import img2 from "../images/img2_whatsinyourairbnb_home 1.png";
+import img3 from "../images/img3_whatsinyourairbnb_home 1.png";
+import img4 from "../images/img4_whatsinyourairbnb_home 1.png";
+import img5 from "../images/img5_whatsinyourairbnb_home 1.png";
+import img6 from "../images/img6_whatsinyourairbnb_home 1.png";
+import img7 from "../images/img7_whatsinyourairbnb_home 1.png";
+import img8 from "../images/img8_whatsinyourairbnb_home 1.png";
+import kitchen from '../images/icons/kitchen-pack-spoon_svgrepo.com.svg'
+import wifi from '../images/icons/wifi_svgrepo.com.svg'
+import workspace from '../images/icons/desk_svgrepo.com.svg'
+import parking from '../images/icons/car_svgrepo.com.svg'
+import tv from '../images/icons/tv-alt_svgrepo.com.svg'
+import washer from '../images/icons/washing-machine_svgrepo.com.svg'
+import dryer from '../images/icons/washing-machine_svgrepo.com-1.svg'
+import air_conditioning from '../images/icons/air-conditioning_svgrepo.com.svg'
+import patio from '../images/icons/patio_svgrepo.com.svg'
+import security from '../images/icons/security-camera-cctv_svgrepo.com.svg'
 
 export default function Home() {
   // For go "back to top" button
@@ -7,10 +26,72 @@ export default function Home() {
   //   window.scrollTo(0, 0)
   // }, [])
 
+  const cards1 = [
+    {
+      image: img1,
+      title: "Celestial Backyard",
+      body: "Bask in the mesmerizing night sky with friends or family in your backyard, complete with swings, stone paths, a starlit atmosphere, and a wooden fence.",
+    },
+    {
+      image: img2,
+      title: "Luxury Bath Amenities",
+      body: "Take pleasure in a warm shower in your exclusive bathroom, complete with bath towels and environmentally friendly soap, shampoo, and conditioner.",
+    },
+    {
+      image: img3,
+      title: "Cooking Comfort",
+      body: "Craft fond memories cooking in the fully-equipped kitchen at Redpoint. Enjoy the convenience and comfort of preparing meals in your home away from home.",
+    },
+    {
+      image: img4,
+      title: "Opulent Bed Retreat",
+      body: "Indulge in opulent vacation luxury on queen beds with fresh linens and sumptuously plush pillows, creating a serene and inviting haven for unparalleled relaxation.",
+    },
+  ];
+
+  const cards2 = [
+    {
+      image: img5,
+      title: "Cafe Serenity",
+      body: "Relish delightful moments at the cafe and savor leisurely times with your friends, all while basking in the warm glow of sunshine at our luxurious vacation rental.",
+    },
+    {
+      image: img6,
+      title: "Nature Embrace",
+      body: "Discover modern-rustic charm at this Airbnb. Walls exude elegance, bathed in soft, ancient-style lighting. Wooden floors offer a serene connection to nature.",
+    },
+    {
+      image: img7,
+      title: "Grand Comfort",
+      body: "The expansive living room offers a generously spacious environment adorned with a fireplace and plush sofas, creating an inviting and luxurious atmosphere.",
+    },
+    {
+      image: img8,
+      title: "Desert Escape",
+      body: "Immerse yourself in an enchanting sojourn, cocooned by serene desert views, for an experience that seamlessly blends tranquility with natural allure.",
+    },
+  ];
+
+  const amenities1 = [
+    { icon: kitchen, text: "Kitchen" },
+    { icon: workspace, text: "Dedicated workspace" },
+    { icon: tv, text: "TV" },
+    { icon: dryer, text: "Dryer" },
+    { icon: patio, text: "Patio or balcony" }
+  ];
+  const amenities2 = [
+    { icon: wifi, text: "Wifi" },
+    { icon: parking, text: "Free parking on premises" },
+    { icon: washer, text: "Washer" },
+    { icon: air_conditioning, text: "Air conditioning" },
+    { icon: security, text: "Security cameras on property" }
+  ];
+
   return (
     <div className="flex flex-col items-center pt-32 w-full">
+      {/* SERENE MOMENTS */}
       <div className="flex flex-col items-center h-full w-full text-center bg-[url('../images/home_heroimage 1.png')]">
-        <h1 className="text-6xl">Serene Moments</h1>
+        <h1 className="text-[60px] font-souvenir">Serene Moments</h1>
         <p className="text-xl">
           Experience tranquility before the holiday rush. Retreat to a cozy
           vacation Airbnb exclusively for yourself during the first half of
@@ -20,12 +101,13 @@ export default function Home() {
           Book Now
         </button>
       </div>
+      {/* WHAT'S REDPOINT */}
       <div className="text-center flex flex-row justify-between items-center">
         <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
           gif
         </div>
         <div className="w-[868px]">
-          <h2 className="text-6xl">What's Redpoint?</h2>
+          <h2 className="text-[45px] font-souvenir">What's Redpoint?</h2>
           <p>
             We are a luxury vacation Airbnb for rent in Yucca Valley,
             California. Redpoint is 2h drive from Los Angeles, California, so if
@@ -59,12 +141,13 @@ export default function Home() {
           gif
         </div>
       </div>
+      {/* WHY CHOOSE REDPOINT? */}
       <div className="text-center bg-white w-screen flex flex-row items-center justify-between">
         <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
           gif
         </div>
         <div id="content">
-          <h2 className="text-6xl">Why choose Redpoint?</h2>
+          <h2 className="text-[45px] font-souvenir">Why choose Redpoint?</h2>
           <p>94% of recent guests think we have great check-in experience!</p>
           <div className="flex flex-row">
             <div className="text-left">
@@ -93,15 +176,86 @@ export default function Home() {
           gif
         </div>
       </div>
+      {/* WHAT'S IN YOUR AIRBNB */}
       <div className="text-center">
-        <h2 className="text-[45px] font-souvenir font-normal">What's in Your Airbnb</h2>
-        <p>Our vacation Airbnb provides everything you need for a comfortable stay. <span className="text-[#D33F3F] font-bold">View Gallery</span></p>
+        <h2 className="text-[45px] font-souvenir">What's in Your Airbnb</h2>
+        <p>
+          Our vacation Airbnb provides everything you need for a comfortable
+          stay.{" "}
+          <span className="text-[#D33F3F] font-bold underline">
+            View Gallery
+          </span>
+        </p>
+        <div className="flex flex-col gap-10">
+          <div className="flex flex-row gap-4">
+            {cards1.map((card) => {
+              return (
+                <HomeCard
+                  image={card.image}
+                  title={card.title}
+                  body={card.body}
+                />
+              );
+            })}
+          </div>
+          <div className="flex flex-row gap-4">
+            {cards2.map((card) => {
+              return (
+                <HomeCard
+                  image={card.image}
+                  title={card.title}
+                  body={card.body}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      {/* REDPOINT AMENITIES */}
+      <div className="text-center bg-white w-screen">
+        <h2 className="text-[45px] font-souvenir">Redpoint Amenities</h2>
+        <p>Indulge in the luxury of our comprehensive array of 36 amenities thoughtfully curated for your convenience during your stay with us.</p>
+        <div className="flex flex-row justify-center gap-10">
+          <div className="flex flex-col gap-4">
+              {amenities1.map(amenity => {
+                return (
+                  <div className="flex flex-row gap-2">  
+                    <img src={amenity.icon} alt={amenity.text} />
+                    <div>{amenity.text}</div>
+                  </div>
+                )})}
+          </div>
+          <div className="flex flex-col gap-4">
+              {amenities2.map(amenity => {
+                return (
+                  <div className="flex flex-row gap-2">
+                    <img src={amenity.icon} alt={amenity.text} />
+                    <div>{amenity.text}</div>
+                  </div>
+                )})}
+          </div>
+          <div className="flex flex-col"></div>
+        </div>
+        <button className="w-[240px] h-[61px] border border-[#272728]">Show all 36 amenities</button>
+      </div>
+      {/* HOW TO BOOK REDPOINT */}
+      <div className="text-center w-screen">
+        <h2 className="text-[60px] font-souvenir">How to Book Redpoint</h2>
+        <p>Click the button below to begin your memorable experience at Redpoint!</p>
+        <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
+          Book Now
+        </button>
+      </div>
+      {/* GUEST STORIES */}
+      <div className="text-center bg-white w-screen">
+        <h2 className="text-[45px] font-souvenir">Guest Stories</h2>
+        <p>See what our guests are saying. <Link to="/reviews" className="text-[#D33F3F] font-bold underline">Read More Reviews</Link></p>
         <div className="flex flex-row"></div>
       </div>
       {/* 
       // SECTION TEMPLATE
-      <div className="text-center bg-white">
-        <h2 className="text-6xl"></h2>
+      <div className="text-center bg-white w-screen">
+        <h2 className="text-[45px] font-souvenir"></h2>
         <p></p>
         <div className="flex flex-row"></div>
       </div>

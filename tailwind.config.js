@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "avenir": ['Avenir', 'system-ui', 'arial'],
+        "avenir": ['avenir', 'system-ui', 'arial'],
         "souvenir": ['souvenir', 'arial']
       }
     },

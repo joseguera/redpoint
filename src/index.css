@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+  
+@font-face {
+    font-family: "souvenir";
+    src: url("../public/assets/Souvenir.ttf");
+}
 
 html, body {
   margin: 0;

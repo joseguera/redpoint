@@ -9,35 +9,36 @@ export default function Footer() {
       <div>
         <img src={logo} alt="logo" />
       </div>
-      <div className='flex flex-row justify-between items-center w-full'>
+      <div className='flex flex-row justify-between items-start w-full'>
         <div className='flex flex-col justify-center items-start'>
-          <p>Email us at</p>
-          <p>redpoint@mixtrip.com</p>
+          <p className='text-xl'>Email us at</p>
+          <a href='mailto:redpoint@mixtrip.com' className='text-[#A7B1BE] text-xl'>redpoint@mixtrip.com</a>
         </div>
         <div className='flex flex-col justify-center items-start'>
           <div className='flex flex-col justify-center items-start'>
-          <p>All pages</p>
+          <p className='text-xl'>All pages</p>
           <div className='flex flex-row justify-between items-start w-64'>
             <div className='flex flex-col justify-start items-start'>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
+              <Link className='text-[#A7B1BE] text-xl' to="/">Home</Link>
+              <Link className='text-[#A7B1BE] text-xl' to="/about">About</Link>
             </div>
             <div className='flex flex-col justify-start items-start'>
-              <Link to="/attractions">Attractions</Link>
-              <Link to="/contact-us">Contact</Link>
+              <Link className='text-[#A7B1BE] text-xl' to="/attractions">Attractions</Link>
+              <Link className='text-[#A7B1BE] text-xl' to="/contact-us">Contact</Link>
             </div>
             <div className='flex flex-col justify-start items-start'>
-              <Link to="/reviews">Reviews</Link>
+              <Link className='text-[#A7B1BE] text-xl' to="/reviews">Reviews</Link>
             </div>
           </div>
 
           </div>
         </div>
         <div className='flex flex-col justify-center items-start'>
-          <p>Social media</p>
+          <p className='text-xl'>Social media</p>
           <p>instagram icon</p>
         </div>
       </div>
+      <div className='text-[#A7B1BE] text-xl'>Copyright © 2023 Mixtrip.</div>
     </div>
   )
 }

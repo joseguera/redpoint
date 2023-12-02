@@ -24,7 +24,68 @@ html, body {
   color: #272728;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Page Heros */
+
+.hero {
+  background-image: url('../src/images/home_heroimage\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.attractions-hero {
+  background-image: url('../src/images/page-heros/attractions_topimage\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% auto;
+}
+
+.reviews-hero {
+  background-image: url('../src/images/page-heros/reviews_topimage\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-hero {
+  background-image: url('../src/images/page-heros/about_topimage\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-hero {
+  background-image: url('../src/images/page-heros/contactus_topimage\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Page Footers */
+
+.home-footer {
+  background-image: url('../src/images/img_home_bookredpoint\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.attractions-footer {
+  background-image: url('../src/images/img_attractions_bookredpoint\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% auto;
+}
+
+.reviews-footer {
+  background-image: url('../src/images/img_reviews_bookredpoint\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-footer {
+  background-image: url('../src/images/img_about_bookredpoint\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-footer {
+  background-image: url('../src/images/img_contactus_bookredpoint\ 1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

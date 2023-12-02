@@ -9,11 +9,11 @@ export default function Footer() {
   let currentYear = d.getFullYear();
   
   return (
-    <div className='p-5 w-full bg-[#000A14] text-white flex flex-col justify-center items-center'>
+    <div className='p-5 bg-[#000A14] text-white flex flex-col justify-center items-center w-screen'>
       <div>
         <img src={logo} alt="logo" />
       </div>
-      <div className='flex flex-row justify-between items-start w-full'>
+      <div className='flex flex-row justify-between items-start w-10/12'>
         <div className='flex flex-col justify-center items-start'>
           <p className='text-xl font-black'>Email us at</p>
           <a href='mailto:redpoint@mixtrip.com' className='text-[#A7B1BE]'>redpoint@mixtrip.com</a>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
         <div className='flex flex-col justify-center items-start'>
           <p className='text-xl font-black'>Social media</p>
-          <img src={instagramLogo} className='w-[24px]' />
+          <img src={instagramLogo} className='w-[24px]' alt="instagram" />
         </div>
       </div>
       <div className='text-[#A7B1BE]'>Copyright © {currentYear} Mixtrip.</div>

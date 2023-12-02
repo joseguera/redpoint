@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
+import HomeGuestStories from "../components/HomeGuestStories";
+import FooterHero from '../components/FooterHero';
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
 import img2 from "../images/img2_whatsinyourairbnb_home 1.png";
 import img3 from "../images/img3_whatsinyourairbnb_home 1.png";
@@ -88,15 +90,17 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-32 w-full">
+    <div className="flex flex-col items-center pt-16 w-full">
       {/* SERENE MOMENTS */}
-      <div className="flex flex-col items-center h-full w-full text-center bg-[url('../images/home_heroimage 1.png')]">
-        <h1 className="text-[60px] font-souvenir">Serene Moments</h1>
-        <p className="text-xl">
-          Experience tranquility before the holiday rush. Retreat to a cozy
-          vacation Airbnb exclusively for yourself during the first half of
-          December and savor your getaway!
-        </p>
+      <div className="hero flex flex-col items-center justify-center h-[600px] w-full text-center gap-24">
+        <div className="flex flex-col items-center justify-center gap-4">
+          <h1 className="text-[60px] font-souvenir text-white">Serene Moments</h1>
+          <p className="w-[690px] text-white">
+            Experience tranquility before the holiday rush. Retreat to a cozy
+            vacation Airbnb exclusively for yourself during the first half of
+            December and savor your getaway!
+          </p>
+        </div>
         <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
           Book Now
         </button>
@@ -239,27 +243,13 @@ export default function Home() {
         <button className="w-[240px] h-[61px] border border-[#272728]">Show all 36 amenities</button>
       </div>
       {/* HOW TO BOOK REDPOINT */}
-      <div className="text-center w-screen">
-        <h2 className="text-[60px] font-souvenir">How to Book Redpoint</h2>
-        <p>Click the button below to begin your memorable experience at Redpoint!</p>
-        <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
-          Book Now
-        </button>
-      </div>
+      <FooterHero image="home-footer" title="How to Book Redpoint" description="Click the button below to begin your memorable experience at Redpoint!" />
       {/* GUEST STORIES */}
       <div className="text-center bg-white w-screen">
         <h2 className="text-[45px] font-souvenir">Guest Stories</h2>
         <p>See what our guests are saying. <Link to="/reviews" className="text-[#D33F3F] font-bold underline">Read More Reviews</Link></p>
-        <div className="flex flex-row"></div>
+        <HomeGuestStories />
       </div>
-      {/* 
-      // SECTION TEMPLATE
-      <div className="text-center bg-white w-screen">
-        <h2 className="text-[45px] font-souvenir"></h2>
-        <p></p>
-        <div className="flex flex-row"></div>
-      </div>
-      */}
     </div>
   );
 }

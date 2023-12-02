@@ -1,26 +1,33 @@
 import React from 'react';
 
-interface ReviewEntryProps {
+interface UserEntry {
     name: string; 
     location: string; 
     image: string; 
     rating: string; 
     reviewDate: string;
+    notes: string;
     reviewPost: string;
 }
 
-export default function ReviewEntry() {
+interface ReviewEntryProps {
+    user: UserEntry;
+}
+
+const ReviewEntry: React.FC<ReviewEntryProps> = ({user: { name, location, image, rating, reviewDate, notes, reviewPost }}) => {
   return (
     <div className='flex flex-col'>
         <div className='flex flex-row'>
-            <div>user image</div>
+            <div><img src={image} alt={name} /></div>
             <div className='flex flex-col'> 
-                <div>user name</div>
-                <div>user location</div>
+                <div>{name}</div>
+                <div>{location}</div>
             </div>
         </div>
-        <div>stars - date</div>
-        <div>review text</div>
+        <div><img src={rating} alt="star rating" /> - <span>{reviewDate}</span>{notes && ` - ${notes}`}</div>
+        <div>{reviewPost}</div>
     </div>
   )
 }
+
+export default ReviewEntry;

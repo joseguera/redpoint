@@ -16,6 +16,32 @@ export default function Attractions() {
   useEffect(() => {
     setActivity("all")
   }, [])
+ 
+  ///////////////////////////////////////////////////
+  ////////// ATTRACTIONS BUTTONS LOGIC //////////////
+  ///////////////////////////////////////////////////
+
+  // const words = [
+  //   { name: 'spray', clicked: true },
+  //   { name: 'elite', clicked: true },
+  //   { name: 'exuberant', clicked: true },
+  //   { name: 'destruction', clicked: true },
+  //   { name: 'present', clicked: false }
+  // ];
+  
+  // function result(name) {
+  //   let newWords = [];
+  //     words.map(word => {
+  //       if (name === word.name) {
+  //         word.clicked = true;
+  //       } else {
+  //         word.clicked = false;
+  //       }
+  //     })
+  //     return words;
+  // }
+  
+  // console.log(result('present'));
 
   return (
     <div className="flex flex-col justify-center items-center gap-24 pt-16">

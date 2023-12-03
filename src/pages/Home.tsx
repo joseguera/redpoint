@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
+import Modal from "../components/Modal";
 import HomeGuestStories from "../components/HomeGuestStories";
 import FooterHero from "../components/FooterHero";
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
@@ -255,6 +256,9 @@ export default function Home() {
         <button className="w-[240px] h-[61px] bg-white border border-[#272728]">
           Show all 36 amenities
         </button>
+        <div className="App h-screen flex flex-col items-center justify-center bg-purple-200">
+          <Modal />
+        </div>
       </div>
       {/* HOW TO BOOK REDPOINT */}
       <FooterHero

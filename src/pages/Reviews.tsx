@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { userReviews } from '../utils';
 import PageHeros from '../components/PageHeros';
 import ReviewEntry from '../components/ReviewEntry';
 import FooterHero from '../components/FooterHero';
+import Pagination from '../components/Pagination';
 import view from '../images/icons/link-out_svgrepo.com.svg';
 import cleanliness from "../images/icons/clean_svgrepo.com.svg";
 import accuracy from "../images/icons/fact-check_svgrepo.com.svg";
@@ -14,8 +15,22 @@ import wing1 from '../images/wing1.svg';
 import wing2 from '../images/wing2.svg';
 import search from '../images/icons/search_svgrepo.com.svg';
 
+interface UserEntry {
+  name: string; 
+  location: string; 
+  image: string; 
+  rating: string; 
+  reviewDate: string;
+  notes: string;
+  reviewPost: string;
+}
 
 export default function Reviews() {
+  let PageSize = 10;
+  const [keyword, setKeyword] = useState("");
+  const [users, setUsers] = useState<UserEntry[]>([]);
+  const [dataSize, setDataSize] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1);
 
   const scores = [
     { icon: cleanliness, category: "Cleanliness", rating: 4.9 },
@@ -25,7 +40,6 @@ export default function Reviews() {
     { icon: location, category: "Location", rating: 4.9 },
     { icon: value, category: "Value", rating: 4.9 }
   ];
-
   const overallRatings = [
     { ratingCategory: 5, ratingTotal: "w-4/5"  },
     { ratingCategory: 4, ratingTotal: "w-1/5"  },
@@ -33,6 +47,26 @@ export default function Reviews() {
     { ratingCategory: 2, ratingTotal: "w-2/5"  },
     { ratingCategory: 1, ratingTotal: "w-0"  },
   ];
+
+  function getReview(user: string) {
+    setKeyword(prevKeyword => prevKeyword = user)
+  }
+
+  useEffect(() => {
+    async function getArticle() {
+      const firstPageIndex = (currentPage - 1) * PageSize;
+      const lastPageIndex = firstPageIndex + PageSize;
+      try {
+      setDataSize(userReviews.length)
+      setUsers(userReviews.slice(firstPageIndex, lastPageIndex))
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    getArticle();
+    window.scrollTo(0, 0)
+  }, [currentPage]);
 
   return (
     <div className="flex flex-col justify-center items-center gap-24 pt-16">
@@ -90,20 +124,28 @@ export default function Reviews() {
           {/* COL 2 */}
           <div className='flex flex-col items-start w-[744px] gap-6'>
             <div className='text-[24px] font-black'>17 Reviews</div>
+            {/* FILTER REVIEWS - SEARCH BY KEYWORD */}
             <div className='w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2'>
               <img src={search} alt="search bar" />
               <input
                 className='text-[16px] text-[#717171] w-full'
                 placeholder='Search reviews' 
+                onChange={(e) => getReview(e.target.value)}
+                value={keyword}
               />
             </div>
             <div className='flex flex-col gap-12'>
-              {userReviews.map(user => {
+              {users.filter(user => user.reviewPost.toLowerCase().includes(keyword.toLowerCase())).map(user => {
                 return <ReviewEntry user={user} />
 
               })}
             </div>
-            <div>{`< 1 2 >`}</div>
+            <Pagination
+                currentPage={currentPage}
+                totalCount={dataSize}
+                pageSize={PageSize}
+                onPageChange={(page) => setCurrentPage(page)}
+            />
           </div>
         </div>
       </div>

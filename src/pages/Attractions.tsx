@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PageHeros from "../components/PageHeros";
 import FooterHero from "../components/FooterHero";
-import { attractions } from "../utils";
+import { attractions } from '../utils';
 
 export default function Attractions() {
+  const allRef = useRef<HTMLButtonElement | null>(null);
+  const shoppingRef = useRef<HTMLButtonElement | null>(null);
+  const attractionsRef = useRef<HTMLButtonElement | null>(null);
+  const [activity, setActivity] = useState("all");
+
+  let allHighlight = allRef.current && allRef.current.innerText.toLowerCase() === activity ? "text-[#FFFFFF] font-black bg-[#D33F3F]" : "text-[#272728] font-normal bg-[#FFFFFF]"; 
+  let shoppingHighlight = shoppingRef.current && shoppingRef.current.innerText.toLowerCase() === activity ? "text-[#FFFFFF] font-black bg-[#D33F3F]" : "text-[#272728] font-normal bg-[#FFFFFF]"; 
+  let attractionsHighlight = attractionsRef.current && attractionsRef.current.innerText.toLowerCase() === activity ? "text-[#FFFFFF] font-black bg-[#D33F3F]" : "text-[#272728] font-normal bg-[#FFFFFF]"; 
+
+  useEffect(() => {
+    setActivity("all")
+  }, [])
+
   return (
     <div className="flex flex-col justify-center items-center gap-24 pt-16">
       <PageHeros heroImage="attractions-hero" />
@@ -16,31 +29,45 @@ export default function Attractions() {
         </p>
       </div>
       <div className="flex flex-row">
-        <button className="w-[240px] h-[61px] text-[16px] text-[#FFFFFF] font-black bg-[#D33F3F] border border-[#272728] border-r-0">
+        <button ref={allRef} onClick={() => setActivity('all')} className={`w-[240px] h-[61px] text-[16px] ${allHighlight} border border-[#272728] border-r-0`}>
           All
         </button>
-        <button className="w-[240px] h-[61px] text-[16px] font-black border border-[#272728]">
+        <button ref={shoppingRef} onClick={() => setActivity('shopping')} className={`w-[240px] h-[61px] text-[16px] ${shoppingHighlight} border border-[#272728]`}>
           Shopping
         </button>
-        <button className="w-[240px] h-[61px] text-[16px] font-black border border-[#272728] border-l-0">
+        <button ref={attractionsRef} onClick={() => setActivity('attractions')} className={`w-[240px] h-[61px] text-[16px] ${attractionsHighlight} border border-[#272728] border-l-0`}>
           Attractions
         </button>
       </div>
       {/* ATTRACTION COMPONENT */}
       <div className="flex flex-col items-center justify-center gap-24">
-        {attractions.map((attraction) => {
-          return (
-            <div key={attraction.id} className="flex flex-col items-center justify-center text-center gap-6">
-              <h3 className="text-[24px] font-black">{attraction.name}</h3>
-              <p className="text-[#9393B0] italic">{attraction.location}</p>
-              <p className="w-[1103px]" dangerouslySetInnerHTML={{__html: attraction.description}}></p>
-              <div className="flex flex-row gap-6">
-                <img src={attraction.images[0]} alt={attraction.name} className="w-[568px]" />
-                <img src={attraction.images[1]} alt={attraction.name} className="w-[568px]" />
+        {activity !== 'all' ? (
+          attractions.filter(attraction => attraction.type === activity).map((attraction) => {
+            return (
+              <div key={attraction.id} className="flex flex-col items-center justify-center text-center gap-6">
+                <h3 className="text-[24px] font-black">{attraction.name}</h3>
+                <p className="text-[#9393B0] italic">{attraction.location}</p>
+                <p className="w-[1103px]" dangerouslySetInnerHTML={{__html: attraction.description}}></p>
+                <div className="flex flex-row gap-6">
+                  <img src={attraction.images[0]} alt={attraction.name} className="w-[568px]" />
+                  <img src={attraction.images[1]} alt={attraction.name} className="w-[568px]" />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            )})
+        ) : (
+          attractions.map((attraction) => {
+            return (
+              <div key={attraction.id} className="flex flex-col items-center justify-center text-center gap-6">
+                <h3 className="text-[24px] font-black">{attraction.name}</h3>
+                <p className="text-[#9393B0] italic">{attraction.location}</p>
+                <p className="w-[1103px]" dangerouslySetInnerHTML={{__html: attraction.description}}></p>
+                <div className="flex flex-row gap-6">
+                  <img src={attraction.images[0]} alt={attraction.name} className="w-[568px]" />
+                  <img src={attraction.images[1]} alt={attraction.name} className="w-[568px]" />
+                </div>
+              </div>
+            )})
+        )}
       </div>
       <FooterHero
         image="attractions-footer"

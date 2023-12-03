@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeros from "../components/PageHeros";
 import FooterHero from "../components/FooterHero";
 import mainImage from '../images/photo-gallery/13.png'
@@ -18,6 +18,10 @@ export default function About() {
     { name: "Backyard", image: "" },
     { name: "Kitchen", image: "" }
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex flex-col justify-center items-center gap-24 pt-16">

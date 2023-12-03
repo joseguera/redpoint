@@ -33,6 +33,22 @@ import mission_creek2 from './images/attractions-images/05-missioncreek2.png';
 import whitewater1 from './images/attractions-images/06-whitewaterpreserve1.png';
 import whitewater2 from './images/attractions-images/06-whitewaterpreserve2.png';
 
+// SCORES PICTURES
+import cleanliness from "./images/icons/clean_svgrepo.com.svg";
+import accuracy from "./images/icons/fact-check_svgrepo.com.svg";
+import check_in from "./images/icons/key-alt_svgrepo.com.svg";
+import communication from "./images/icons/communication-bubble-chat-comment-talk-speech-icon_svgrepo.com.svg";
+import location from "./images/icons/location-pin_svgrepo.com.svg";
+import value from "./images/icons/price-tag-price_svgrepo.com.svg";
+
+// FEATURES PICTURES
+import hair_dryer from './images/icons/hair-dryer_svgrepo.com.svg';
+import shampoo from './images/icons/shampoo_svgrepo.com.svg';
+import hot_water from './images/icons/bath-and-shower_svgrepo.com.svg';
+import washer from "./images/icons/washing-machine_svgrepo.com.svg";
+import dryer from "./images/icons/washing-machine_svgrepo.com-1.svg";
+import essentials from './images/icons/toilet-paper-dots_svgrepo.com.svg';
+
 interface UserEntry {
     name: string; 
     location: string; 
@@ -50,6 +66,22 @@ interface Attraction {
     location: string;
     description: string;
     images: string[];
+}
+
+interface Score {
+    icon: string; 
+    category: string; 
+    rating: number;
+}
+
+interface Feature {
+    icon: string; 
+    category: string; 
+}
+
+interface Rating {
+    ratingCategory: number;
+    ratingTotal: string;
 }
 
 export const userReviews: UserEntry[] = [
@@ -82,3 +114,31 @@ export const attractions: Attraction[] = [
     { id: 7, type: "attractions", name: "Whitewater Preserve", location: "28 mi (45 km) from Redpoint", description: "Whitewater Preserve is 2,851 acres surrounded by the Bureau of Land Management's San Gorgonio Wilderness and includes the year-round Whitewater River. Rich riparian habitat hosts the endangered southwestern willow flycatcher and least Bell's vireo, and provides opportunity to see migrating summer tanagers and vermilion flycatchers. The canyon has a robust population of bighorn sheep, deer and bear, and is an important wildlife corridor between the San Bernardino and San Jacinto Mountains. The Wildlands Conservancy purchased an additional 3,200 acres in the Whitewater corridor that were donated to the Bureau of Land Management. These donated lands include sand dunes that are home to the endangered fringe-toed lizard at Windy Point, which lies at the confluence of the Whitewater and San Gorgonio Rivers.", images: [whitewater1, whitewater2] }
 ]
 
+export const scores: Score[] = [
+    { icon: cleanliness, category: "Cleanliness", rating: 4.9 },
+    { icon: accuracy, category: "Accuracy", rating: 5.0 },
+    { icon: check_in, category: "Check-in", rating: 4.9 },
+    { icon: communication, category: "Communication", rating: 5.0 },
+    { icon: location, category: "Location", rating: 4.9 },
+    { icon: value, category: "Value", rating: 4.9 }
+];
+
+export const overallRatings: Rating[] = [
+    { ratingCategory: 5, ratingTotal: "w-4/5"  },
+    { ratingCategory: 4, ratingTotal: "w-1/5"  },
+    { ratingCategory: 3, ratingTotal: "w-3/5"  },
+    { ratingCategory: 2, ratingTotal: "w-2/5"  },
+    { ratingCategory: 1, ratingTotal: "w-0"  },
+  ];
+
+export const bathroomFeatures: Feature[] = [
+    { icon: hair_dryer, category: "Hair Dryer" },
+    { icon: shampoo, category: "Shampoo" },
+    { icon: hot_water, category: "Hot Water" }
+];
+
+export const bedroomLaundryFeatures: Feature[] = [
+    { icon: washer, category: "Washer" },
+    { icon: dryer, category: "Dryer" },
+    { icon: essentials, category: "Essentials" }
+];

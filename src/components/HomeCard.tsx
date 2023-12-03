@@ -8,7 +8,7 @@ interface HomeCardProps {
 
 const HomeCard: React.FC<HomeCardProps> = ({ image, title, body }) => {
   return (
-    <div className='w-[322px] h-[521px] flex flex-col flex-wrap justify-between items-center '>
+    <div className='w-[322px] h-[521px] flex flex-col flex-wrap justify-between items-center drop-shadow-md'>
         <div>
             <img src={image} alt={title} className='w-[322px]' />
         </div>

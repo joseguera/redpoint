@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
 import HomeGuestStories from "../components/HomeGuestStories";
-import FooterHero from '../components/FooterHero';
+import FooterHero from "../components/FooterHero";
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
 import img2 from "../images/img2_whatsinyourairbnb_home 1.png";
 import img3 from "../images/img3_whatsinyourairbnb_home 1.png";
@@ -11,16 +11,22 @@ import img5 from "../images/img5_whatsinyourairbnb_home 1.png";
 import img6 from "../images/img6_whatsinyourairbnb_home 1.png";
 import img7 from "../images/img7_whatsinyourairbnb_home 1.png";
 import img8 from "../images/img8_whatsinyourairbnb_home 1.png";
-import kitchen from '../images/icons/kitchen-pack-spoon_svgrepo.com.svg'
-import wifi from '../images/icons/wifi_svgrepo.com.svg'
-import workspace from '../images/icons/desk_svgrepo.com.svg'
-import parking from '../images/icons/car_svgrepo.com.svg'
-import tv from '../images/icons/tv-alt_svgrepo.com.svg'
-import washer from '../images/icons/washing-machine_svgrepo.com.svg'
-import dryer from '../images/icons/washing-machine_svgrepo.com-1.svg'
-import air_conditioning from '../images/icons/air-conditioning_svgrepo.com.svg'
-import patio from '../images/icons/patio_svgrepo.com.svg'
-import security from '../images/icons/security-camera-cctv_svgrepo.com.svg'
+import kitchen from "../images/icons/kitchen-pack-spoon_svgrepo.com.svg";
+import wifi from "../images/icons/wifi_svgrepo.com.svg";
+import workspace from "../images/icons/desk_svgrepo.com.svg";
+import parking from "../images/icons/car_svgrepo.com.svg";
+import tv from "../images/icons/tv-alt_svgrepo.com.svg";
+import washer from "../images/icons/washing-machine_svgrepo.com.svg";
+import dryer from "../images/icons/washing-machine_svgrepo.com-1.svg";
+import air_conditioning from "../images/icons/air-conditioning_svgrepo.com.svg";
+import patio from "../images/icons/patio_svgrepo.com.svg";
+import security from "../images/icons/security-camera-cctv_svgrepo.com.svg";
+import pot from "../images/gifs/RedPiont_ILLU_002.gif";
+import swing from "../images/gifs/illustration_001.gif";
+import leaves from "../images/gifs/img_gif_home3.svg";
+import spark from "../images/gifs/img_gif_home4.svg";
+import stars from "../images/gifs/img_gif_home5.svg";
+import cypress from "../images/gifs/illustration_003.gif";
 
 export default function Home() {
   // For go "back to top" button
@@ -79,22 +85,24 @@ export default function Home() {
     { icon: workspace, text: "Dedicated workspace" },
     { icon: tv, text: "TV" },
     { icon: dryer, text: "Dryer" },
-    { icon: patio, text: "Patio or balcony" }
+    { icon: patio, text: "Patio or balcony" },
   ];
   const amenities2 = [
     { icon: wifi, text: "Wifi" },
     { icon: parking, text: "Free parking on premises" },
     { icon: washer, text: "Washer" },
     { icon: air_conditioning, text: "Air conditioning" },
-    { icon: security, text: "Security cameras on property" }
+    { icon: security, text: "Security cameras on property" },
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center gap-24 pt-16">
+    <div className="flex flex-col justify-center items-center pt-16">
       {/* SERENE MOMENTS */}
       <div className="hero flex flex-col items-center justify-center h-[600px] w-full text-center gap-24">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-[60px] font-souvenir text-white">Serene Moments</h1>
+          <h1 className="text-[60px] font-souvenir text-white">
+            Serene Moments
+          </h1>
           <p className="w-[690px] text-white">
             Experience tranquility before the holiday rush. Retreat to a cozy
             vacation Airbnb exclusively for yourself during the first half of
@@ -106,11 +114,9 @@ export default function Home() {
         </button>
       </div>
       {/* WHAT'S REDPOINT */}
-      <div className="text-center flex flex-row justify-between items-center">
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
-        </div>
-        <div className="w-[868px]">
+      <div className="h-[800px] text-center flex flex-row justify-between items-center gap-6">
+        <img src={pot} alt="pot on fire" className="w-[215px]" />
+        <div className="w-[1103px] flex flex-col gap-6">
           <h2 className="text-[45px] font-souvenir">What's Redpoint?</h2>
           <p>
             We are a luxury vacation Airbnb for rent in Yucca Valley,
@@ -141,20 +147,19 @@ export default function Home() {
             start your dream trip from Redpoint!
           </p>
         </div>
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
-        </div>
+        <img src={swing} alt="relax swing" className="w-[215px]" />
       </div>
       {/* WHY CHOOSE REDPOINT? */}
-      <div className="text-center bg-white w-screen flex flex-row items-center justify-between">
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
-        </div>
-        <div id="content">
+      <div className="text-center bg-white w-screen h-[547px] flex flex-row justify-center items-center gap-4">
+        <img src={leaves} alt="leaves" className="w-[86.94px] h-[82.27px]" />
+        <div
+          id="content"
+          className="w-[1103px] flex flex-col justify-center items-center text-center gap-6"
+        >
           <h2 className="text-[45px] font-souvenir">Why choose Redpoint?</h2>
           <p>94% of recent guests think we have great check-in experience!</p>
-          <div className="flex flex-row">
-            <div className="text-left">
+          <div className="flex flex-row gap-10">
+            <div className="text-left w-[450px]">
               <ul className="list-disc pl-5 marker:text-[#D33F3F]">
                 <li>1,112 sqft (3 bedrooms, 2 baths, 1 kitchen)</li>
                 <li>sanitized, self-check-in (contact-free)</li>
@@ -163,7 +168,7 @@ export default function Home() {
                 <li>newly renovated</li>
               </ul>
             </div>
-            <div className="text-left">
+            <div className="text-left  w-[450px]">
               <ul className="list-disc pl-5 marker:text-[#D33F3F]">
                 <li>
                   desks for remote working which include a monitor in each room
@@ -176,19 +181,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
-        </div>
+        <img src={spark} alt="sparkling" className="w-[87.88px] h-[82.88px]" />
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
-      <div className="text-center">
+      <div className="text-center flex flex-col py-24 gap-6">
         <h2 className="text-[45px] font-souvenir">What's in Your Airbnb</h2>
         <p>
           Our vacation Airbnb provides everything you need for a comfortable
           stay.{" "}
-          <span className="text-[#D33F3F] font-bold underline">
+          <Link to="/about" className="text-[#D33F3F] font-bold underline">
             View Gallery
-          </span>
+          </Link>
         </p>
         <div className="flex flex-col gap-10">
           <div className="flex flex-row gap-4">
@@ -216,38 +219,60 @@ export default function Home() {
         </div>
       </div>
       {/* REDPOINT AMENITIES */}
-      <div className="text-center bg-white w-screen">
-        <h2 className="text-[45px] font-souvenir">Redpoint Amenities</h2>
-        <p>Indulge in the luxury of our comprehensive array of 36 amenities thoughtfully curated for your convenience during your stay with us.</p>
-        <div className="flex flex-row justify-center gap-10">
+      <div className="text-center bg-white w-screen h-[800px] flex flex-col justify-center items-center gap-16 relative">
+        <img src={stars} alt="stars" className="w-[84px] h-[101.87px] absolute top-16 left-14" />
+        <img src={cypress} alt="cypress tree" className="w-[215px] absolute bottom-8 right-2" />
+        <div className="flex flex-col gap-2 w-[1103px]">
+          <h2 className="text-[45px] font-souvenir">Redpoint Amenities</h2>
+          <p>
+            Indulge in the luxury of our comprehensive array of 36 amenities
+            thoughtfully curated for your convenience during your stay with us.
+          </p>
+        </div>
+        <div className="flex flex-row justify-between">
           <div className="flex flex-col gap-4">
-              {amenities1.map(amenity => {
-                return (
-                  <div className="flex flex-row gap-2">  
-                    <img src={amenity.icon} alt={amenity.text} />
-                    <div>{amenity.text}</div>
-                  </div>
-                )})}
+            {amenities1.map((amenity) => {
+              return (
+                <div className="w-[350px] flex flex-row gap-2">
+                  <img src={amenity.icon} alt={amenity.text} />
+                  <div>{amenity.text}</div>
+                </div>
+              );
+            })}
           </div>
           <div className="flex flex-col gap-4">
-              {amenities2.map(amenity => {
-                return (
-                  <div className="flex flex-row gap-2">
-                    <img src={amenity.icon} alt={amenity.text} />
-                    <div>{amenity.text}</div>
-                  </div>
-                )})}
+            {amenities2.map((amenity) => {
+              return (
+                <div className="flex flex-row gap-2">
+                  <img src={amenity.icon} alt={amenity.text} />
+                  <div>{amenity.text}</div>
+                </div>
+              );
+            })}
           </div>
           <div className="flex flex-col"></div>
         </div>
-        <button className="w-[240px] h-[61px] bg-white border border-[#272728]">Show all 36 amenities</button>
+        <button className="w-[240px] h-[61px] bg-white border border-[#272728]">
+          Show all 36 amenities
+        </button>
       </div>
       {/* HOW TO BOOK REDPOINT */}
-      <FooterHero image="home-footer" title="How to Book Redpoint" description="Click the button below to begin your memorable experience at Redpoint!" />
+      <FooterHero
+        image="home-footer"
+        title="How to Book Redpoint"
+        description="Click the button below to begin your memorable experience at Redpoint!"
+      />
       {/* GUEST STORIES */}
-      <div className="text-center bg-white w-screen">
-        <h2 className="text-[45px] font-souvenir">Guest Stories</h2>
-        <p>See what our guests are saying. <Link to="/reviews" className="text-[#D33F3F] font-bold underline">Read More Reviews</Link></p>
+      <div className="flex flex-col py-24 gap-40">
+        <div className="text-center flex flex-col gap-6">
+          <h2 className="text-[45px] font-souvenir">Guest Stories</h2>
+          <p>
+            See what our guests are saying.{" "}
+            <Link to="/reviews" className="text-[#D33F3F] font-bold underline">
+              Read More Reviews
+            </Link>
+          </p>
+        </div>
         <HomeGuestStories />
       </div>
     </div>

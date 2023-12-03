@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-16">
       {/* SERENE MOMENTS */}
-      <div className="hero flex flex-col items-center justify-center h-[600px] w-full text-center gap-24">
+      <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24">
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-[60px] font-souvenir text-white">
             Serene Moments

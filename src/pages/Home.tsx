@@ -90,7 +90,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-16 w-full">
+    <div className="flex flex-col justify-center items-center gap-24 pt-16">
       {/* SERENE MOMENTS */}
       <div className="hero flex flex-col items-center justify-center h-[600px] w-full text-center gap-24">
         <div className="flex flex-col items-center justify-center gap-4">

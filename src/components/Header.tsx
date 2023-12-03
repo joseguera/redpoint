@@ -42,7 +42,7 @@ export default function Header() {
           Contact Us
         </Link>
       </div>
-        <Link className="w-[180px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center" to="/">Book Now</Link>
+        <a className="w-[180px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center" href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank" rel="noreferrer">Book Now</a>
     </div>
   );
 }

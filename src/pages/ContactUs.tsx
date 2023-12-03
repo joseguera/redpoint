@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PageHeros from "../components/PageHeros";
 import FooterHero from "../components/FooterHero";
 import instagram from "../images/instagram icon.svg";
@@ -7,6 +7,11 @@ import butterfly from "../images/gifs/img_gif_contactus1.svg";
 import tree_lights from "../images/gifs/RedPiont_ILLU_004.gif";
 
 export default function ContactUs() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="flex flex-col justify-center items-center gap-24 pt-16">
       <PageHeros heroImage="contact-hero" />

@@ -15,6 +15,7 @@ export default function Attractions() {
 
   useEffect(() => {
     setActivity("all")
+      window.scrollTo(0, 0)
   }, [])
  
   ///////////////////////////////////////////////////

@@ -5,10 +5,10 @@ import { attractions } from "../utils";
 
 export default function Attractions() {
   return (
-    <div className="flex flex-col justify-center items-center gap-24">
+    <div className="flex flex-col justify-center items-center gap-24 pt-16">
       <PageHeros heroImage="attractions-hero" />
       <div id="content" className="w-[690px] flex flex-col justify-center items-center text-center gap-6">
-        <h2 className="text-[45px] font-souvenir">Outdoor Bliss</h2>
+        <h1 className="text-[45px] font-souvenir">Outdoor Bliss</h1>
         <p>
           Redpoint is surrounded by diverse attractions like Joshua Tree
           National Park for hiking, Pioneertown for exploring, Shopping outlets

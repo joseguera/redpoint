@@ -35,12 +35,12 @@ export default function Reviews() {
   ];
 
   return (
-    <div className='flex flex-col w-screen'>
+    <div className="flex flex-col justify-center items-center gap-24 pt-16">
       <PageHeros heroImage='reviews-hero' />
       <div className='flex flex-col gap-10'>
         {/* HEADING */}
         <div id="content" className='flex flex-col items-center'>
-            <h2 className="text-[45px] font-souvenir">Reviews</h2>
+            <h1 className="text-[45px] font-souvenir">Reviews</h1>
             <p>
               See what our guests are saying.
             </p>

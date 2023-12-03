@@ -20,7 +20,7 @@ export default function About() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center gap-24 pt-16">
       <PageHeros heroImage="about-hero" />
       {/* REDPOINT'S STORY */}
       <div className="text-center bg-white w-screen flex flex-row items-center justify-between">
@@ -28,7 +28,7 @@ export default function About() {
           gif
         </div>
         <div id="content">
-          <h2 className="text-[45px] font-souvenir">Redpoint's Story</h2>
+          <h1 className="text-[45px] font-souvenir">Redpoint's Story</h1>
           <p>
             Daisy, the founder of the vacation Airbnb known as Redpoint, drew
             inspiration from her passion for bouldering when choosing the name.

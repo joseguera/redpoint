@@ -1,3 +1,4 @@
+// USER PICTURES
 import rating from './images/rating_stars.svg';
 import olivia from './images/user-avatars/olivia.png';
 import venkata from './images/user-avatars/venkata.png';
@@ -16,6 +17,22 @@ import mary from './images/user-avatars/mary.png';
 import annie from './images/user-avatars/annie.png';
 import ashwin from './images/user-avatars/ashwin.png';
 
+// ATTRACTION PICTURES
+import desert_hills1 from './images/attractions-images/00-desert-hills-premium-outlets-01.png';
+import desert_hills2 from './images/attractions-images/00-desert-hills-premium-outlets-02.png';
+import pioneertown1 from './images/attractions-images/01-pioneertown1.png';
+import pioneertown2 from './images/attractions-images/01-pioneertown2.png';
+import sky1 from './images/attractions-images/02-sky1.png';
+import sky2 from './images/attractions-images/02-sky2.png';
+import big_morongo1 from './images/attractions-images/03-bigmorongo1.png';
+import big_morongo2 from './images/attractions-images/03-bigmorongo2.png';
+import joshua_tree1 from './images/attractions-images/04-joshua1.png';
+import joshua_tree2 from './images/attractions-images/04-joshua2.png';
+import mission_creek1 from './images/attractions-images/05-missioncreek1.png';
+import mission_creek2 from './images/attractions-images/05-missioncreek2.png';
+import whitewater1 from './images/attractions-images/06-whitewaterpreserve1.png';
+import whitewater2 from './images/attractions-images/06-whitewaterpreserve2.png';
+
 interface UserEntry {
     name: string; 
     location: string; 
@@ -24,6 +41,14 @@ interface UserEntry {
     reviewDate: string;
     notes: string;
     reviewPost: string;
+}
+
+interface Attraction {
+    id: number;
+    name: string; 
+    location: string;
+    description: string;
+    images: string[];
 }
 
 export const userReviews: UserEntry[] = [
@@ -40,8 +65,19 @@ export const userReviews: UserEntry[] = [
     { name: "Rishi", location: "Orange, California", image: rishi, rating: rating, reviewDate: "March 2023", notes: "Group trip", reviewPost: "Daisy was extremely helpful with the check-in/check-out instructions, provided great recommendations, and was very responsive throughout our stay. The house is huge with a massive backyard with a fire-pit. Great place to star-gaze, and hand out with your friends and family." },
     { name: "Justin", location: "Santa Barbara, California", image: justin, rating: rating, reviewDate: "February 2023", notes: "Group trip", reviewPost: "Only a short drive to the park entrance, this listing was a fantastic place to stay for a quick trip to Joshua Tree. The space was exactly as seen in the photos, the backyard and kitchen were beautiful. The host team was responsive and gave clear, easy instructions for check-in and check-out. I would highly recommend." },
     { name: "Aimee", location: "9 months on Airbnb", image: aimee, rating: rating, reviewDate: "February 2023", notes: "", reviewPost: "The second time I came to the desert, the house felt very good, and the host was very thoughtful at first glance.Thinking about all our needs, especially the queen bed in the yard, where you can lie in the yard and watch the stars.It's so beautiful, definitely worth the trip, we'll introduce our friends to try it out." },
-    { name: "Rui", location: "2 years on Airbnb", image: rui, rating: rating, reviewDate: "January 2023", notes: "", reviewPost: "It is a lovely place to stay if you are exploring Joshua Tree, especially if you are climbers!!!!! They provided 2 free, like new big crash pads, also has tension hanging board in living room, so great for morning finger warm up. The back yard is big, it's great to stay outside enjoying the night view (tons of stars, you can even see galaxies in late night). They have a double bed in the backyard, you can actually lying on the bed and staring at the night sky, so relaxing.<br />Well designed and clean room, very comfortable bed. Kitchen has equipped everything we need. Very easy to communicate with clear instructions. We will definitely come back next time if we are back in Joshua Tree." },
+    { name: "Rui", location: "2 years on Airbnb", image: rui, rating: rating, reviewDate: "January 2023", notes: "", reviewPost: "It is a lovely place to stay if you are exploring Joshua Tree, especially if you are climbers!!!!! They provided 2 free, like new big crash pads, also has tension hanging board in living room, so great for morning finger warm up. The back yard is big, it's great to stay outside enjoying the night view (tons of stars, you can even see galaxies in late night). They have a double bed in the backyard, you can actually lying on the bed and staring at the night sky, so relaxing. Well designed and clean room, very comfortable bed. Kitchen has equipped everything we need. Very easy to communicate with clear instructions. We will definitely come back next time if we are back in Joshua Tree." },
     { name: "Mary", location: "Inglewood, California", image: mary, rating: rating, reviewDate: "January 2023", notes: "Stayed with kids", reviewPost: "Amazing place! I absolutely loved the open concept layout. The yard was beautiful and location was great. Everything about this home was well thought out. It is great place to hang and unwind. My kids loved this place. I will definitely be back. :)" },
     { name: "Annie", location: "Los Angeles, California", image: annie, rating: rating, reviewDate: "January 2023", notes: "", reviewPost: "Very communicative host, house was very clean. Bedrooms are decent size and bathrooms seem newly renovated. Thank you!" },
     { name: "Ashwin", location: "3 years on Airbnb", image: ashwin, rating: rating, reviewDate: "December 2022", notes: "", reviewPost: "This airbnb was probably the best equipped of all the airbnb's I've ever stayed at. I wish I had the time to enjoy the massive backyard and all the equipment in the garage (they even have crash pads available). The house was well appointed with probably the most well stocked kitchen. While we had a couple challenges getting into the house initially, the host was super responsive and we were able to resolve that issue shortly. In addition, the host went above and beyond in retrieving and shipping us an item that we accidentally discarded. Overall, an absolutely fantastic experience!" },
 ];
+
+export const attractions: Attraction[] = [
+    { id: 1, name: "Desert Hills Premium Outlets", location: "33 mi (53 km) from Redpoint", description: "Desert Hills Premium Outlets® is home to the largest collection of luxury outlets in California. The outdoor shopping center features 180 designer stores including Alexander McQueen, Burberry, Coach, Gucci, Kate Spade New York, Prada, Fendi, Saint Laurent Paris and many more. There are several dining options at Desert Hills Premium Outlets such as Blaze Pizza, Five Guys Burgers & Fries, and Panda Express.", images: [desert_hills1, desert_hills2] },
+    { id: 2, name: "Pioneertown Mountains Preserve", location: "10 mi (16 km) from Redpoint", description: "The 25,500-acre Pioneertown Mountains Preserve descends from the high piney 7,800-foot ridges into the Pioneertown Valley. The small community of Pioneertown is surrounded by conservancy-owned volcanic mesas, the Sawtooth Mountains, and Preserve lands leading to the San Bernardino National Forest. The Preserve has year-round riparian corridors in Pipes Canyon and Little Morongo Canyons. It is an important landscape linkage between Joshua Tree National Park, San Bernardino National Forest, and the Big Horn BLM Wilderness.", images: [pioneertown1, pioneertown2] },
+    { id: 3, name: "Sky's the Limit Observatory and Nature Center", location: "27 mi (43.5 km) from Redpoint", description: "Sky's The Limit is a non-profit organization dedicated to providing hands-on learning opportunities for the people of and visitors to the Joshua Tree Gateway Communities. We provide a place where the honest pursuit of knowledge enriches the lives of all willing to participate, whether to view the smallest objects on the Earth, or observe the colossal displays in the sky.", images: [sky1, sky2] },
+    { id: 4, name: "Big Morongo Canyon Preserve", location: "10 mi (16.3 km) from Redpoint", description: "Nestled in the Little San Bernardino Mountains, the desert oasis at Big Morongo Canyon is one of the 10 largest cottonwood and willow riparian (stream) habitats in California. Water draining from the surrounding mountains flows into a river through the canyon, and ground water rises up along the Morongo fault to form the marsh habitat, which is a great attractor for wildlife.", images: [big_morongo1, big_morongo2] },
+    { id: 5, name: "Joshua Tree National Park", location: "11mi (17.7 km) from Redpoint", description: "Joshua Tree National Park is open year-round. There are few facilities within the park's approximately 800,000 acres, making Joshua Tree a true desert wilderness just a few hours outside Los Angeles, San Diego, Las Vegas, and Phoenix. About 2.8 million visitors come to the park each year to enjoy activities such as hiking, camping, photography, rock climbing, and simply enjoying the serene desert scenery. You have lots of things to do out here: backpacking, biking, birding, climbing, slacklining, hiking, horseback riding, photography, ranger-guided activities, stargazing, and wildflower viewing.<br /><br />The top 3 Filming locations in Joshua Tree, CA right now are Lucious Cactus Gardens with Huge Boulders & valley, Straw bale house in the desert with views and SPACE AGE 1974 AURORA. Movies have been filmed in Joshua Tree National Park: Seven Psychopaths (2012), The Big Year (2011), A Lot Like Love (2005), The Satan Bug (1965), Road Rules (1995-2007), Zombie Nation (2004), BlackBoxTV (2010-2015), Ghost Ship (1992).", images: [joshua_tree1, joshua_tree2] },
+    { id: 6, name: "Mission Creek Preserve", location: "18 mi (28.6 km) from Redpoint", description: "Located in a transition zone between the Sonoran and Mojave deserts, the 4,760-acre Mission Creek Preserve has a rich species composition with flora and fauna representing both deserts. Visitors are surprised to discover the center of the Preserve is a lush wetland with a backdrop of eroded painted hills and Mount San Gorgonio looming in the background. The wetlands are important habitat for the endangered least Bell's vireo and southwest willow flycatcher. It is a great place to spot colorful summer tanagers and vermillion flycatchers. The Preserve hosts deer, bear, big horn sheep and mountain lions, and has spectacular displays of spring wildflowers in wet years. The trail system leads onto the Pacific Crest Trail, which is two miles from the Stone House Group Campground.", images: [mission_creek1, mission_creek2] },
+    { id: 7, name: "Whitewater Preserve", location: "28 mi (45 km) from Redpoint", description: "Whitewater Preserve is 2,851 acres surrounded by the Bureau of Land Management's San Gorgonio Wilderness and includes the year-round Whitewater River. Rich riparian habitat hosts the endangered southwestern willow flycatcher and least Bell's vireo, and provides opportunity to see migrating summer tanagers and vermilion flycatchers. The canyon has a robust population of bighorn sheep, deer and bear, and is an important wildlife corridor between the San Bernardino and San Jacinto Mountains. The Wildlands Conservancy purchased an additional 3,200 acres in the Whitewater corridor that were donated to the Bureau of Land Management. These donated lands include sand dunes that are home to the endangered fringe-toed lizard at Windy Point, which lies at the confluence of the Whitewater and San Gorgonio Rivers.", images: [whitewater1, whitewater2] }
+]
+

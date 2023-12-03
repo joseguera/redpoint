@@ -4,7 +4,7 @@ import logo from "../images/final-redpoint-logo-design 1.svg";
 
 export default function Header() {
   return (
-    <div className="fixed bg-[#F7F4F2] h-16 w-full flex flex-row justify-between items-center gap-16">
+    <div className="fixed bg-[#F7F4F2] h-16 w-full flex flex-row justify-between items-center gap-16 z-10 drop-shadow-lg">
       <div>
         <Link to="/">
           <img src={logo} alt="redpoint logo" className="w-[216px] h-[64px]" />

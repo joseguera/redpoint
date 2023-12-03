@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
+import CarouselHome from "../components/CarouselHome";
 import Modal from "../components/Modal";
 import HomeGuestStories from "../components/HomeGuestStories";
 import FooterHero from "../components/FooterHero";
@@ -99,6 +100,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-16">
       {/* SERENE MOMENTS */}
+      <CarouselHome />
       <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24">
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-[60px] font-souvenir text-white">

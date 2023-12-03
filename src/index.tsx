@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Reviews from "./pages/Reviews";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const router = createBrowserRouter([
   {

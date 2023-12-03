@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
 import CarouselHome from "../components/CarouselHome";
 import Modal from "../components/Modal";
+
 import HomeGuestStories from "../components/HomeGuestStories";
 import FooterHero from "../components/FooterHero";
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
@@ -32,9 +33,10 @@ import cypress from "../images/gifs/illustration_003.gif";
 
 export default function Home() {
   // For go "back to top" button
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const cards1 = [
     {
@@ -153,7 +155,7 @@ export default function Home() {
         <img src={swing} alt="relax swing" className="w-[215px]" />
       </div>
       {/* WHY CHOOSE REDPOINT? */}
-      <div className="text-center bg-white w-screen h-[547px] flex flex-row justify-center items-center gap-4">
+      <div className="text-center bg-[#FFFFFF] w-screen h-[547px] flex flex-row justify-center items-center gap-4">
         <img src={leaves} alt="leaves" className="w-[86.94px] h-[82.27px]" />
         <div
           id="content"
@@ -255,12 +257,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col"></div>
         </div>
-        <button className="w-[240px] h-[61px] bg-white border border-[#272728]">
-          Show all 36 amenities
-        </button>
-        <div className="App h-screen flex flex-col items-center justify-center bg-purple-200">
-          <Modal />
-        </div>
+        {/* SHOW ALL 36 AMENITIES MODAL */}
+        <ModalHome />
       </div>
       {/* HOW TO BOOK REDPOINT */}
       <FooterHero

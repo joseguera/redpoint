@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { userReviews } from '../utils';
+import { userReviews, scores, overallRatings } from '../utils';
 import PageHeros from '../components/PageHeros';
 import ReviewEntry from '../components/ReviewEntry';
 import FooterHero from '../components/FooterHero';
 import Pagination from '../components/Pagination';
-import view from '../images/icons/link-out_svgrepo.com.svg';
-import cleanliness from "../images/icons/clean_svgrepo.com.svg";
-import accuracy from "../images/icons/fact-check_svgrepo.com.svg";
-import check_in from "../images/icons/key-alt_svgrepo.com.svg";
-import communication from "../images/icons/communication-bubble-chat-comment-talk-speech-icon_svgrepo.com.svg";
-import location from "../images/icons/location-pin_svgrepo.com.svg";
-import value from "../images/icons/price-tag-price_svgrepo.com.svg";
+import ModalReviews from '../components/ModalReviews';
 import wing1 from '../images/wing1.svg';
 import wing2 from '../images/wing2.svg';
 import search from '../images/icons/search_svgrepo.com.svg';
@@ -31,22 +25,6 @@ export default function Reviews() {
   const [users, setUsers] = useState<UserEntry[]>([]);
   const [dataSize, setDataSize] = useState(1)
   const [currentPage, setCurrentPage] = useState(1);
-
-  const scores = [
-    { icon: cleanliness, category: "Cleanliness", rating: 4.9 },
-    { icon: accuracy, category: "Accuracy", rating: 5.0 },
-    { icon: check_in, category: "Check-in", rating: 4.9 },
-    { icon: communication, category: "Communication", rating: 5.0 },
-    { icon: location, category: "Location", rating: 4.9 },
-    { icon: value, category: "Value", rating: 4.9 }
-  ];
-  const overallRatings = [
-    { ratingCategory: 5, ratingTotal: "w-4/5"  },
-    { ratingCategory: 4, ratingTotal: "w-1/5"  },
-    { ratingCategory: 3, ratingTotal: "w-3/5"  },
-    { ratingCategory: 2, ratingTotal: "w-2/5"  },
-    { ratingCategory: 1, ratingTotal: "w-0"  },
-  ];
 
   function getReview(user: string) {
     setKeyword(prevKeyword => prevKeyword = user)
@@ -92,10 +70,8 @@ export default function Reviews() {
                 <h3 className='text-[16px] font-extrabold'>Guest Favorite</h3>
                 <p className='text-[#717171] text-[16px] text-center'>One of the most loved homes on Airbnb based on ratings, reviews, and reliability</p>
               </div>
-              <button className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3">
-                <img src={view} className="w-[16px]" alt="view all" />
-                <p>View all reviews</p>
-              </button>
+              {/* MODAL FOR VIEW ALL REVIEWS */}
+              <ModalReviews />
               <div className='flex flex-col items-center gap-2'>
                 <p className='font-extrabold'>Overall Rating</p>
                 {overallRatings.map(rating => {
@@ -123,7 +99,7 @@ export default function Reviews() {
             </div>
           {/* COL 2 */}
           <div className='flex flex-col items-start w-[744px] gap-6'>
-            <div className='text-[24px] font-black'>17 Reviews</div>
+            <div className='text-[24px] font-black'>{userReviews.length} Reviews</div>
             {/* FILTER REVIEWS - SEARCH BY KEYWORD */}
             <div className='w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2'>
               <img src={search} alt="search bar" />

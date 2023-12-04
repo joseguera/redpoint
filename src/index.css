@@ -31,7 +31,7 @@ input {
 /* Page Heros */
 
 .hero {
-  background-image: url('../src/images/home_heroimage\ 1.png');
+  background-image: url('../src/images/home_heroimage_1.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -162,22 +162,17 @@ input {
   }
 }
 
-.carousel-indicators [data-bs-target] {
-  box-sizing: content-box;
-  flex: 0 1 auto;
-  width: 13px !important;
-  height: 13px !important;
-  padding: 0;
-  margin-right: 12px !important;
-  margin-left: 6px !important;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  transition: opacity .6s ease;
-  border-radius: 100%;
+/* Carousel Styles */
+.thumbs-wrapper, .axis-vertical {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+}
+
+.carousel .thumb.selected {
+  border: 5px solid #D33F3F !important;
+}
+
+.carousel .thumb:hover {
+  border: 3px solid #D33F3F !important;
 }

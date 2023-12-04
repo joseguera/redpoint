@@ -1,8 +1,7 @@
 import React from "react";
-import image1 from "../images/page-heros/about_topimage 1.png";
+import image1 from "../images/home_heroimage_1.png";
 import image2 from "../images/page-heros/attractions_topimage 1.png";
 import image3 from "../images/page-heros/contactus_topimage 1.png";
-import image4 from "../images/page-heros/reviews_topimage 1.png";
 var ReactDOM = require("react-dom");
 var Carousel = require("react-responsive-carousel").Carousel;
 
@@ -11,13 +10,17 @@ export default function CarouselHome() {
     { image: image1 },
     { image: image2 },
     { image: image3 },
-    { image: image4 },
   ];
 
   return (
     <Carousel
       showArrows={false}
-      autoplay={true}
+      autoPlay={true}
+      interval={3000}
+      transitionTime={2000}
+      infiniteLoop={true}
+      showStatus={false}
+      showThumbs={false}
     //   onChange={onChange}
     //   onClickItem={onClickItem}
     //   onClickThumb={onClickThumb}
@@ -27,18 +30,14 @@ export default function CarouselHome() {
             <p className="legend">Legend 1</p>
           </div> */}
           <div>
-            <img src={articles[0].image} alt="pic" />
+            <img src={articles[0].image} alt="pic" className="h-[600px]" />
           </div>
           <div>
-            <img src={articles[1].image} alt="pic" />
+            <img src={articles[1].image} alt="pic" className="h-[600px]" />
           </div>
           <div>
-            <img src={articles[2].image} alt="pic" />
+            <img src={articles[2].image} alt="pic" className="h-[600px]" />
           </div>
-          <div>
-            <img src={articles[3].image} alt="pic" />
-          </div>
-
     </Carousel>
   );
 }

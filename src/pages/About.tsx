@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import PageHeros from "../components/PageHeros";
+import CarouselAbout from "../components/CarouselAbout";
 import FooterHero from "../components/FooterHero";
 import mainImage from '../images/photo-gallery/13.png'
 
@@ -24,14 +25,17 @@ export default function About() {
   }, [])
 
   return (
-    <div className="flex flex-col justify-center items-center gap-24 pt-16">
+    <div className="flex flex-col justify-center items-center pt-16">
       <PageHeros heroImage="about-hero" />
       {/* REDPOINT'S STORY */}
-      <div className="text-center bg-white w-screen flex flex-row items-center justify-between">
+      <div className="text-center w-screen flex flex-row items-center justify-between py-24">
         <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
           gif
         </div>
-        <div id="content">
+        <div
+          id="content"
+          className="w-[690px] flex flex-col justify-center items-center text-center gap-6"
+        >
           <h1 className="text-[45px] font-souvenir">Redpoint's Story</h1>
           <p>
             Daisy, the founder of the vacation Airbnb known as Redpoint, drew
@@ -47,27 +51,33 @@ export default function About() {
         </div>
       </div>
       {/* PHOTO GALLERY BUTTONS */}
-      <div id="content">
-          <h2 className="text-[45px] font-souvenir">Redpoint's Story</h2>
-          <div className="flex flex-row justify-start items-center">
-            {galleryButtons.map(button => {
-              return <div key={button.name} className="rounded-[21.5px] w-[168.01px] h-[43px] bg-[#D33F3F] flex justify-center items-center">{button.name}</div>
-
+      <div
+        id="content"
+        className="bg-white w-screen flex flex-col justify-center items-center"
+      >
+        <div className="py-24 flex flex-col justify-center items-center gap-10">
+          <h2 className="text-[45px] font-souvenir">Photo Gallery</h2>
+          <div className="flex flex-row flex-wrap justify-start items-center w-[1312px] pb-4 gap-6 gap-x-12">
+            {galleryButtons.map((button) => {
+              return (
+                <div
+                  key={button.name}
+                  className="rounded-[21.5px] w-[168.01px] h-[43px] bg-[#D33F3F] flex justify-center items-center hover:cursor-pointer"
+                >
+                  {button.name}
+                </div>
+              );
             })}
           </div>
-      </div>
-      {/* PHOTO GALLERY */}
-      <div>
-        <div className="w-[1312px] h-[872px]">
-          <img src={mainImage} alt="living room"/>
         </div>
-        <div>Carousel Goes here</div>
+        {/* PHOTO GALLERY */}
+        <CarouselAbout />
+        <FooterHero
+          image="about-footer"
+          title="Start dream journey here"
+          description="Click the button below to begin your memorable experience at Redpoint!"
+        />
       </div>
-      <FooterHero
-        image="about-footer"
-        title="Start dream journey here"
-        description="Click the button below to begin your memorable experience at Redpoint!"
-      />
     </div>
   );
 }

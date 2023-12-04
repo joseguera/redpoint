@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
 import CarouselHome from "../components/CarouselHome";
-import Modal from "../components/Modal";
-
+import ModalHome from "../components/ModalHome";
 import HomeGuestStories from "../components/HomeGuestStories";
 import FooterHero from "../components/FooterHero";
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
@@ -102,21 +101,25 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center pt-16">
       {/* SERENE MOMENTS */}
-      <CarouselHome />
-      <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24">
-        <div className="flex flex-col items-center justify-center gap-4">
-          <h1 className="text-[60px] font-souvenir text-white">
-            Serene Moments
-          </h1>
-          <p className="w-[690px] text-white">
-            Experience tranquility before the holiday rush. Retreat to a cozy
-            vacation Airbnb exclusively for yourself during the first half of
-            December and savor your getaway!
-          </p>
+      <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24 relative">
+        {/* HERO CAROUSEL */}
+        <CarouselHome />
+        {/* HERO TEXT & BUTTON */}
+        <div className=" flex flex-col items-center gap-20 absolute">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <h1 className="text-[60px] font-souvenir text-white">
+              Serene Moments
+            </h1>
+            <p className="w-[690px] text-white">
+              Experience tranquility before the holiday rush. Retreat to a cozy
+              vacation Airbnb exclusively for yourself during the first half of
+              December and savor your getaway!
+            </p>
+          </div>
+          <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
+            Book Now
+          </button>
         </div>
-        <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
-          Book Now
-        </button>
       </div>
       {/* WHAT'S REDPOINT */}
       <div className="h-[800px] text-center flex flex-row justify-between items-center gap-6">
@@ -225,8 +228,16 @@ export default function Home() {
       </div>
       {/* REDPOINT AMENITIES */}
       <div className="text-center bg-white w-screen h-[800px] flex flex-col justify-center items-center gap-16 relative">
-        <img src={stars} alt="stars" className="w-[84px] h-[101.87px] absolute top-16 left-14" />
-        <img src={cypress} alt="cypress tree" className="w-[215px] absolute bottom-8 right-2" />
+        <img
+          src={stars}
+          alt="stars"
+          className="w-[84px] h-[101.87px] absolute top-16 left-14"
+        />
+        <img
+          src={cypress}
+          alt="cypress tree"
+          className="w-[215px] absolute bottom-8 right-2"
+        />
         <div className="flex flex-col gap-2 w-[1103px]">
           <h2 className="text-[45px] font-souvenir">Redpoint Amenities</h2>
           <p>

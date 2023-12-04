@@ -116,9 +116,11 @@ export default function Home() {
               December and savor your getaway!
             </p>
           </div>
-          <button className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px]">
-            Book Now
-          </button>
+          <a href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
+            <div className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px] flex flex-col justify-center align-center">
+              Book Now
+            </div>
+          </a>
         </div>
       </div>
       {/* WHAT'S REDPOINT */}

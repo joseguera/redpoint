@@ -1,19 +1,19 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_295_396)">
-<path d="M12.2012 8.68786H18.6284M12.2672 0V2.22723V15.0491M12.2672 15.0491H18.6284V7.09755C18.6284 3.58456 15.7802 0.736313 12.2672 0.736313C12.2672 3.22117 12.2672 15.0491 12.2672 15.0491Z" stroke="#9393B0" stroke-width="2"/>
-<path d="M12.3325 8.68786H5.90527M12.2665 0V2.22723V15.0491M12.2665 15.0491H5.90527V7.09755C5.90527 3.58456 8.75352 0.736313 12.2665 0.736313C12.2665 3.22117 12.2665 15.0491 12.2665 15.0491Z" stroke="#9393B0" stroke-width="2"/>
-<path d="M20.2178 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M17.0371 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M13.8574 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M10.6758 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M7.49609 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M4.31543 15.0488V23.0004" stroke="#9393B0" stroke-width="2"/>
-<path d="M1.92969 23H22.6037" stroke="#9393B0" stroke-width="2"/>
-<path d="M1.92969 15.0488H22.6037" stroke="#9393B0" stroke-width="2"/>
+<g clip-path="url(#clip0_419_3260)">
+<path d="M12 8.61942H18.3766M12.0655 0V2.20968V14.9306M12.0655 14.9306H18.3766V7.04164C18.3766 3.55632 15.5508 0.730513 12.0655 0.730513C12.0655 3.1958 12.0655 14.9306 12.0655 14.9306Z" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M12.131 8.61942H5.75439M12.0655 0V2.20968V14.9306M12.0655 14.9306H5.75439V7.04164C5.75439 3.55632 8.5802 0.730513 12.0655 0.730513C12.0655 3.1958 12.0655 14.9306 12.0655 14.9306Z" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M19.9546 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M16.7988 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M13.6436 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M10.4878 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M7.33203 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M4.17676 14.9307V22.8196" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M1.81006 22.8193H22.3212" stroke="#9393B0" stroke-width="1.57778"/>
+<path d="M1.81006 14.9307H22.3212" stroke="#9393B0" stroke-width="1.57778"/>
 </g>
 <defs>
-<clipPath id="clip0_295_396">
-<rect width="24" height="24" fill="white"/>
+<clipPath id="clip0_419_3260">
+<rect width="23.6066" height="23.6066" fill="white"/>
 </clipPath>
 </defs>
 </svg>

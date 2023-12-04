@@ -4,7 +4,7 @@ import PageHeros from '../components/PageHeros';
 import ReviewEntry from '../components/ReviewEntry';
 import FooterHero from '../components/FooterHero';
 import Pagination from '../components/Pagination';
-import ModalReviews from '../components/ModalReviews';
+import view from "../images/icons/link-out_svgrepo.com.svg";
 import wing1 from '../images/wing1.svg';
 import wing2 from '../images/wing2.svg';
 import search from '../images/icons/search_svgrepo.com.svg';
@@ -43,7 +43,11 @@ export default function Reviews() {
     }
 
     getArticle();
-    window.scrollTo(0, 0)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }, [currentPage]);
 
   return (
@@ -71,7 +75,14 @@ export default function Reviews() {
                 <p className='text-[#717171] text-[16px] text-center'>One of the most loved homes on Airbnb based on ratings, reviews, and reliability</p>
               </div>
               {/* MODAL FOR VIEW ALL REVIEWS */}
-              <ModalReviews />
+              <a href="https://www.airbnb.com/rooms/786240811671591724/reviews?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
+                <div
+                  className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
+                  >
+                  <img src={view} className="w-[16px]" alt="view all" />
+                  <p>View all reviews</p>
+                </div>
+              </a>
               <div className='flex flex-col items-center gap-2'>
                 <p className='font-extrabold'>Overall Rating</p>
                 {overallRatings.map(rating => {

@@ -25,7 +25,7 @@ export default function CarouselAbout() {
       infiniteLoop={true}
       showStatus={false}
       showThumbs={true}
-      centerMode={false}
+      centerMode={true}
       centerSlidePercentage={100}
       // width={1312}
       width={382}
@@ -34,7 +34,7 @@ export default function CarouselAbout() {
       thumbWidth={96}
       // mobile => 96
       preventMovementUntilSwipeScrollTolerance={true}
-      swipeScrollTolerance={5}
+      swipeScrollTolerance={80}
 
     >
       {galleries.map((gallery) => {

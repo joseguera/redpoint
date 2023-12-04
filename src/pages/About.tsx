@@ -8,17 +8,19 @@ import butterfly2 from "../images/gifs/img_gif_about2.svg";
 
 export default function About() {
   const galleryButtons = [
-    { name: "All", image: "" },
-    { name: "Living Room", image: "" },
-    { name: "House Front", image: "" },
-    { name: "House Back", image: "" },
-    { name: "Entrance", image: "" },
-    { name: "Cafe", image: "" },
-    { name: "Bedroom 1", image: "" },
-    { name: "Bedroom 2", image: "" },
-    { name: "Bedroom 3", image: "" },
-    { name: "Backyard", image: "" },
-    { name: "Kitchen", image: "" },
+    { name: "All", images: "", selected: true },
+    { name: "Living Room", images: [], selected: false },
+    { name: "House Front", image: [], selected: false },
+    { name: "House Back", images: [], selected: false },
+    { name: "Entrance", images: [], selected: false },
+    { name: "Cafe", images: [], selected: false },
+    { name: "Bedroom 1", images: [], selected: false },
+    { name: "Bedroom 2", images: [], selected: false },
+    { name: "Bedroom 3", images: [], selected: false },
+    { name: "Bathroom 1", images: [], selected: false },
+    { name: "Bathroom 2", images: [], selected: false },
+    { name: "Backyard", images: [], selected: false },
+    { name: "Kitchen", images: [], selected: false }
   ];
 
   useEffect(() => {
@@ -66,13 +68,13 @@ export default function About() {
           <h2 className="text-2xl lg:text-3xl font-souvenir">Photo Gallery</h2>
 
           <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
-            <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
-              <div className="flex flex-row lg:flex-col gap-4">
+            <div className="flex flex-row gap-10 w-full overflow-auto">
+              <div className="flex flex-row lg:flex-wrap gap-2 lg:gap-4 lg:p-20">
                 {galleryButtons.map((button) => {
                   return (
                     <div
                       key={button.name}
-                      className="rounded-[21.5px] w-[168.01px] h-[43px] bg-[#D33F3F] flex justify-center items-center hover:cursor-pointer"
+                      className={`rounded-[21.5px] w-[168.01px] h-[43px] ${button.selected ? "bg-[#D33F3F] text-white" : "bg-[#FFFFFF] text-[#272728] border-2 border-[#272728]" } flex justify-center items-center hover:cursor-pointer`}
                     >
                       {button.name}
                     </div>

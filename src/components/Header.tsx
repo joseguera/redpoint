@@ -1,48 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/final-redpoint-logo-design 1.svg";
+import burger from "../images/mobile/burger_menu.svg";
+import x_closer from "../images/mobile/x_closer_menu.svg";
+import home_icon from "../images/mobile/home-1_svgrepo.com.svg";
+import attractions_icon from "../images/mobile/mountain_svgrepo.com.svg";
+import reviews_icon from "../images/mobile/review_svgrepo.com.svg";
+import about_icon from "../images/mobile/about_svgrepo.com.svg";
+import contact_icon from "../images/mobile/contact-mail_svgrepo.com.svg";
+import arrow from "../images/mobile/arrow_menu.svg";
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuOptions = [
+    { icon: home_icon, name: "Home", link: "/" },
+    { icon: attractions_icon, name: "Attractions", link: "/attractions" },
+    { icon: reviews_icon, name: "Reviews", link: "/reviews" },
+    { icon: about_icon, name: "About", link: "/about" },
+    { icon: contact_icon, name: "Contact Us", link: "/contact-us" },
+  ];
+
   return (
-    <div className="fixed bg-[#F7F4F2] h-16 w-full flex flex-row justify-between items-center gap-16 z-10 drop-shadow-lg">
-      <div>
-        <Link to="/">
-          <img src={logo} alt="redpoint logo" className="w-[216px] h-[64px]" />
-        </Link>
+    <>
+      <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 lg:gap-16 z-20 drop-shadow-lg">
+        <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <img
+            src={mobileMenuOpen ? x_closer : burger}
+            alt="open menu"
+            className="w-[75px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out"
+          />
+        </div>
+        <div>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="redpoint logo"
+              className="w-[316px] h-[64px]"
+            />
+          </Link>
+        </div>
+        <div className="hidden lg:flex flex-row justify-center items-center h-16">
+          <Link
+            to="/"
+            className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
+          >
+            Home
+          </Link>
+          <Link
+            className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
+            to="/attractions"
+          >
+            Attractions
+          </Link>
+          <Link
+            className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
+            to="/reviews"
+          >
+            Reviews
+          </Link>
+          <Link
+            className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
+            to="/contact-us"
+          >
+            Contact Us
+          </Link>
+        </div>
+        <a
+          className="text-base lg:text-lg font-black w-[180px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center font-black"
+          href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Book Now
+        </a>
       </div>
-      <div className="hidden lg:flex flex-row justify-center items-center h-16">
-        <Link
-          to="/"
-          className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
-        >
-          Home
-        </Link>
-        <Link
-          className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
-          to="/attractions"
-        >
-          Attractions
-        </Link>
-        <Link
-          className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
-          to="/reviews"
-        >
-          Reviews
-        </Link>
-        <Link
-          className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
-          to="/about"
-        >
-          About
-        </Link>
-        <Link
-          className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
-          to="/contact-us"
-        >
-          Contact Us
-        </Link>
-      </div>
-        <a className="w-[180px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center" href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank" rel="noreferrer">Book Now</a>
-    </div>
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden" onClick={() => setMobileMenuOpen(false)}>
+          <div className="fixed inset-0 z-10" />
+          
+          {/* MODAL BODY */}
+          <div
+            className={`fixed h-screen overflow-auto font-inter inset-y-0 left-0 z-10 w-9/12 overflow-y-clip bg-[#F7F4F2] py-6 pt-16 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+          >
+           <div>
+            {menuOptions.map(options => {
+              return (
+                <div className="flex flex-col">
+                <Link key={options.name} to={options.link} className="flex flex-col p-5">
+                  <div className="flex flex-row justify-between items-center">
+                    <div className="flex flex-row justify-between align-center gap-2">
+                      <img src={options.icon} alt={options.name} />
+                      <div>{options.name}</div>
+                    </div>
+                    <img src={arrow} alt="arrow" />
+                  </div>
+                </Link>
+                <div className="w-[242px] h-[1px] bg-[#DDDDDD] self-center"></div>
+                </div>
+              )
+            })} 
+           </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

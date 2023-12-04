@@ -26,13 +26,13 @@ export default function HomeGuestStories() {
     <div className="flex flex-row justify-center items-center gap-32">
       {users.map((user) => {
         return (
-          <div className="flex flex-col w-[605px] h-[350px] justify-between gap-6 relative">
+          <div className="flex flex-col lg:w-[605px] lg:h-[350px] justify-between gap-6 relative">
             <img
               src={quotes}
               alt="quote symbols"
-              className="w-[255px] h-[201px] self-start absolute -top-28 -left-14"
+              className="w-[249px] lg:w-[255px] h-[201px] self-start absolute -top-28 -left-0 lg:-left-14"
             />
-            <p className="w-[486px] text-left">{user.reviewText}</p>
+            <p className="w-[350px] lg:w-[486px] text-left">{user.reviewText}</p>
             <div className="flex flex-row justify-start items-center gap-4">
               <img src={user.image} alt="user" />
               <div className="flex flex-col justify-between items-start">

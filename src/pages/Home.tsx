@@ -99,7 +99,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center pt-16">
+    <div className="pt-14 flex flex-col justify-center items-center lg:pt-16">
       {/* SERENE MOMENTS */}
       <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24 relative">
         {/* HERO CAROUSEL */}
@@ -107,28 +107,28 @@ export default function Home() {
         {/* HERO TEXT & BUTTON */}
         <div className=" flex flex-col items-center gap-20 absolute">
           <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-[60px] font-souvenir text-white">
+            <h1 className="text-2xl lg:text-3xl font-souvenir text-white">
               Serene Moments
             </h1>
-            <p className="w-[690px] text-white">
+            <p className="text-base lg:text-lg w-[350px] lg:w-[690px] text-white">
               Experience tranquility before the holiday rush. Retreat to a cozy
               vacation Airbnb exclusively for yourself during the first half of
               December and savor your getaway!
             </p>
           </div>
           <a href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
-            <div className="bg-[#D33F3F] text-white border-2 border-white w-[240px] h-[61px] flex flex-col justify-center align-center">
+            <div className="bg-[#D33F3F] w-[140px] lg:w-[240px] text-white text-base font-black lg:text-lg border-2 border-white h-[61px] flex flex-col justify-center align-center">
               Book Now
             </div>
           </a>
         </div>
       </div>
       {/* WHAT'S REDPOINT */}
-      <div className="h-[800px] text-center flex flex-row justify-between items-center gap-6">
-        <img src={pot} alt="pot on fire" className="w-[215px]" />
-        <div className="w-[1103px] flex flex-col gap-6">
-          <h2 className="text-[45px] font-souvenir">What's Redpoint?</h2>
-          <p>
+      <div className="lg:h-[800px] text-center flex flex-col lg:flex-row justify-between items-center gap-6">
+        <img src={pot} alt="pot on fire" className="w-[215px] hidden lg:inline" />
+        <div className="w-[350px] lg:w-[1103px] py-12 lg:py-0 flex flex-col gap-6">
+          <h2 className="text-2xl lg:text-3xl font-souvenir">What's Redpoint?</h2>
+          <p className="text-base lg:text-lg">
             We are a luxury vacation Airbnb for rent in Yucca Valley,
             California. Redpoint is 2h drive from Los Angeles, California, so if
             you want to escape from the city life, we are the closest vacation
@@ -142,7 +142,7 @@ export default function Home() {
             the spectacular night sky stargazing with your favorite cuppa
             relaxing in the backyard. Don't miss out on staying at this gem!
           </p>
-          <p>
+          <p className="text-base lg:text-lg">
             At Redpoint, we embrace the idea of creating room for more leisure
             time. Conveniently located just a short drive from Joshua Tree
             National Park and other renowned scenic spots, our vacation Airbnb
@@ -152,7 +152,7 @@ export default function Home() {
               Learn More
             </Link>
           </p>
-          <p>
+          <p className="text-base lg:text-lg">
             <span className="text-[#D33F3F] font-bold">$135 per night</span>,
             start your dream trip from Redpoint!
           </p>
@@ -160,17 +160,17 @@ export default function Home() {
         <img src={swing} alt="relax swing" className="w-[215px]" />
       </div>
       {/* WHY CHOOSE REDPOINT? */}
-      <div className="text-center bg-[#FFFFFF] w-screen h-[547px] flex flex-row justify-center items-center gap-4">
-        <img src={leaves} alt="leaves" className="w-[86.94px] h-[82.27px]" />
+      <div className="text-center bg-[#FFFFFF] w-screen py-12 lg:py-0 lg:h-[547px] flex flex-col lg:flex-row justify-center items-center gap-4">
+        <img src={leaves} alt="leaves" className="hidden lg:inline w-[86.94px] h-[82.27px]" />
         <div
           id="content"
-          className="w-[1103px] flex flex-col justify-center items-center text-center gap-6"
+          className="w-[350px] lg:w-[1103px] flex flex-col justify-center items-center text-center gap-6"
         >
-          <h2 className="text-[45px] font-souvenir">Why choose Redpoint?</h2>
+          <h2 className="text-2xl lg:text-3xl font-souvenir">Why choose Redpoint?</h2>
           <p>94% of recent guests think we have great check-in experience!</p>
-          <div className="flex flex-row gap-10">
-            <div className="text-left w-[450px]">
-              <ul className="list-disc pl-5 marker:text-[#D33F3F]">
+          <div className="flex flex-col lg:flex-row lg:gap-10">
+            <div className="text-left lg:w-[450px]">
+              <ul className="text-base lg:text-lg list-disc pl-5 marker:text-[#D33F3F]">
                 <li>1,112 sqft (3 bedrooms, 2 baths, 1 kitchen)</li>
                 <li>sanitized, self-check-in (contact-free)</li>
                 <li>free parking</li>
@@ -178,8 +178,8 @@ export default function Home() {
                 <li>newly renovated</li>
               </ul>
             </div>
-            <div className="text-left  w-[450px]">
-              <ul className="list-disc pl-5 marker:text-[#D33F3F]">
+            <div className="text-left lg:w-[450px]">
+              <ul className="text-base lg:text-lg list-disc pl-5 marker:text-[#D33F3F]">
                 <li>
                   desks for remote working which include a monitor in each room
                 </li>
@@ -194,17 +194,17 @@ export default function Home() {
         <img src={spark} alt="sparkling" className="w-[87.88px] h-[82.88px]" />
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
-      <div className="text-center flex flex-col py-24 gap-6">
-        <h2 className="text-[45px] font-souvenir">What's in Your Airbnb</h2>
-        <p>
+      <div className="w-[350px] text-center flex flex-col py-24 lg:py-0 gap-6">
+        <h2 className="text-2xl lg:text-3xl font-souvenir">What's in Your Airbnb</h2>
+        <p className="text-base lg:text-lg">
           Our vacation Airbnb provides everything you need for a comfortable
           stay.{" "}
-          <Link to="/about" className="text-[#D33F3F] font-bold underline">
+          <Link to="/about" className="text-base lg:text-lg text-[#D33F3F] font-bold underline">
             View Gallery
           </Link>
         </p>
         <div className="flex flex-col gap-10">
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-4">
             {cards1.map((card) => {
               return (
                 <HomeCard
@@ -229,25 +229,25 @@ export default function Home() {
         </div>
       </div>
       {/* REDPOINT AMENITIES */}
-      <div className="text-center bg-white w-screen h-[800px] flex flex-col justify-center items-center gap-16 relative">
+      <div className="py-16 lg:py-0 text-center bg-white w-screen lg:h-[800px] flex flex-col justify-center items-center gap-10 pb-60 lg:pb-0 lg:gap-16 relative">
         <img
           src={stars}
           alt="stars"
-          className="w-[84px] h-[101.87px] absolute top-16 left-14"
+          className="hidden lg:inline w-[84px] h-[101.87px] absolute top-16 left-14"
         />
         <img
           src={cypress}
           alt="cypress tree"
-          className="w-[215px] absolute bottom-8 right-2"
+          className="w-[215px] absolute bottom-8 lg:right-2"
         />
-        <div className="flex flex-col gap-2 w-[1103px]">
-          <h2 className="text-[45px] font-souvenir">Redpoint Amenities</h2>
-          <p>
+        <div className="flex flex-col gap-2 w-[350px] lg:w-[1103px]">
+          <h2 className="text-2xl lg:text-3xl font-souvenir">Redpoint Amenities</h2>
+          <p className="text-base lg:text-lg">
             Indulge in the luxury of our comprehensive array of 36 amenities
             thoughtfully curated for your convenience during your stay with us.
           </p>
         </div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col gap-4">
             {amenities1.map((amenity) => {
               return (
@@ -281,9 +281,9 @@ export default function Home() {
       />
       {/* GUEST STORIES */}
       <div className="flex flex-col py-24 gap-40">
-        <div className="text-center flex flex-col gap-6">
-          <h2 className="text-[45px] font-souvenir">Guest Stories</h2>
-          <p>
+        <div className="text-center flex flex-col gap-6 items-center">
+          <h2 className="text-2xl lg:text-3xl font-souvenir">Guest Stories</h2>
+          <p className="w-[250px] lg:w-fit text-base lg:text-lg">
             See what our guests are saying.{" "}
             <Link to="/reviews" className="text-[#D33F3F] font-bold underline">
               Read More Reviews

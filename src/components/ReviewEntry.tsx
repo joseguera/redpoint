@@ -27,7 +27,7 @@ const ReviewEntry: React.FC<ReviewEntryProps> = ({user: { name, location, image,
         <div className='flex flex-row gap-2 items-center'>
             <img src={rating} alt="star rating" /> <span>•</span> <span className='text-[16px]'>{reviewDate}</span>{notes && <div> <span>•</span> <span className='font-light text-[16px] text-[#717171]'>{notes}</span></div>}
         </div>
-        <div>{reviewPost}</div>
+        <div className='text-base lg:text-lg w-[350px] lg:w-fit'>{reviewPost}</div>
     </div>
   )
 }

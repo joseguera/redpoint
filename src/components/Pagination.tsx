@@ -42,7 +42,7 @@ const Pagination: React.FC<PaginationProps> = ({
   let lastPage = paginationRange && paginationRange[paginationRange.length - 1];
   return (
     <ul
-      className="pagination-container"
+      className="pagination-container w-[350px] lg:fit lg:flex flex-row justify-center lg:justify-start"
     >
       {/* Left navigation arrow */}
       <li

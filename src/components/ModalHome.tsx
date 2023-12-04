@@ -19,7 +19,7 @@ const ModalHome = () => {
   return (
     <>
       <button
-        className="w-[240px] h-[61px] bg-white active:bg-[#F9F9F9] w-[240px] h-[61px] bg-white border border-[#272728] hover:shadow-lg focus:outline-none"
+        className="w-[350px] lg:w-[240px] h-[61px] bg-white active:bg-[#F9F9F9] w-[240px] h-[61px] bg-white border border-[#272728] hover:shadow-lg focus:outline-none"
         type="button"
         onClick={() => setShowModal(true)}
       >

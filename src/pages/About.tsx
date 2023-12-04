@@ -26,26 +26,26 @@ export default function About() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center pt-16">
+    <div className="pt-14 flex flex-col justify-center items-center lg:pt-16">
       <PageHeros heroImage="about-hero" />
       {/* REDPOINT'S STORY */}
-      <div className="text-center w-screen flex flex-row items-center justify-center py-24 relative">
+      <div className="text-center w-screen flex flex-row items-center justify-center py-12 pb-36 lg:py-24 relative">
         <img
           src={butterfly1}
           alt="butterfly 1"
-          className="w-[109px] absolute top-28 left-24"
+          className="hidden lg:inline w-[109px] absolute lg:top-28 lg:left-24"
         />
         <img
           src={butterfly2}
           alt="butterfly 2"
-          className="w-[83px] absolute bottom-20 right-32"
+          className="w-[83px] absolute bottom-10 lg:bottom-20 lg:right-32"
         />
         <div
           id="content"
-          className="w-[690px] flex flex-col justify-center items-center text-center gap-6"
+          className="w-[350px] lg:w-[690px] flex flex-col justify-center items-center text-center gap-6"
         >
-          <h1 className="text-[45px] font-souvenir">Redpoint's Story</h1>
-          <p>
+          <h1 className="text-2xl lg:text-3xl font-souvenir">Redpoint's Story</h1>
+          <p className="text-base lg:text-lg">
             Daisy, the founder of the vacation Airbnb known as Redpoint, drew
             inspiration from her passion for bouldering when choosing the name.
             Redpoint, a haven for travelers, reflects Daisy's commitment to
@@ -60,9 +60,9 @@ export default function About() {
         id="content"
         className="bg-white w-screen flex flex-col justify-center items-center"
       >
-        <div className="py-24 flex flex-col justify-center items-center gap-10">
-          <h2 className="text-[45px] font-souvenir">Photo Gallery</h2>
-          <div className="flex flex-row flex-wrap justify-start items-center w-[1312px] pb-4 gap-6 gap-x-12">
+        <div className="flex flex-col justify-center items-center gap-10 py-10 lg:py-24">
+          <h2 className="text-2xl lg:text-3xl font-souvenir">Photo Gallery</h2>
+          <div className="overflow-x-hidden overflow-y-auto flex flex-row justify-start lg:flex-wrap items-center lg:w-[1312px] pb-4 gap-6 gap-x-12">
             {galleryButtons.map((button) => {
               return (
                 <div

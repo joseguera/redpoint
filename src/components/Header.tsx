@@ -22,12 +22,12 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 lg:gap-16 z-20 drop-shadow-lg">
+      <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 lg:gap-10 z-20 drop-shadow-lg">
         <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <img
             src={mobileMenuOpen ? x_closer : burger}
             alt="open menu"
-            className="w-[75px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out"
+            className={`w-[65px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out`}
           />
         </div>
         <div>
@@ -35,7 +35,7 @@ export default function Header() {
             <img
               src={logo}
               alt="redpoint logo"
-              className="w-[316px] h-[64px]"
+              className="w-[216px] h-[64px]"
             />
           </Link>
         </div>
@@ -72,7 +72,7 @@ export default function Header() {
           </Link>
         </div>
         <a
-          className="text-base lg:text-lg font-black w-[180px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center font-black"
+          className="text-base lg:text-lg font-black w-[140px] md:w-[209px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center font-black"
           href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2"
           target="_blank"
           rel="noreferrer"
@@ -87,7 +87,7 @@ export default function Header() {
           
           {/* MODAL BODY */}
           <div
-            className={`fixed h-screen overflow-auto font-inter inset-y-0 left-0 z-10 w-9/12 overflow-y-clip bg-[#F7F4F2] py-6 pt-16 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+            className={`fixed h-screen overflow-auto font-inter inset-y-0 w-3/4 left-0 z-10 overflow-y-clip bg-[#F7F4F2] py-6 pt-16 max-w-md sm:max-w-md sm:ring-1 sm:ring-gray-900/10`}
           >
            <div>
             {menuOptions.map(options => {

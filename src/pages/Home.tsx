@@ -194,7 +194,7 @@ export default function Home() {
         <img src={spark} alt="sparkling" className="w-[87.88px] h-[82.88px]" />
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
-      <div className="w-[350px] text-center flex flex-col py-24 lg:py-0 gap-6">
+      <div className="w-[350px] lg:w-fit text-center flex flex-col py-24 gap-6">
         <h2 className="text-2xl lg:text-3xl font-souvenir">What's in Your Airbnb</h2>
         <p className="text-base lg:text-lg">
           Our vacation Airbnb provides everything you need for a comfortable
@@ -280,8 +280,8 @@ export default function Home() {
         description="Click the button below to begin your memorable experience at Redpoint!"
       />
       {/* GUEST STORIES */}
-      <div className="flex flex-col py-24 gap-40">
-        <div className="text-center flex flex-col gap-6 items-center">
+      <div className="flex flex-col py-24">
+        <div className="text-center flex flex-col gap-12 items-center">
           <h2 className="text-2xl lg:text-3xl font-souvenir">Guest Stories</h2>
           <p className="w-[250px] lg:w-fit text-base lg:text-lg">
             See what our guests are saying.{" "}

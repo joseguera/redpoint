@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
         <div className='border-b border-[#29303C] w-full'></div>
       </div>
-      <div className='-ml-20 lg:ml-0 text-base lg:text-lg text-[#A7B1BE]'>Copyright © {currentYear} Mixtrip.</div>
+      <div className='-ml-20 md:-ml-[20rem] lg:ml-0 text-base lg:text-lg text-[#A7B1BE]'>Copyright © {currentYear} Mixtrip.</div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import HomeCard from "../components/HomeCard";
 import CarouselHome from "../components/CarouselHome";
 import ModalHome from "../components/ModalHome";
-import HomeGuestStories from "../components/HomeGuestStories";
+// import HomeGuestStories from "../components/HomeGuestStories";
 import FooterHero from "../components/FooterHero";
 import img1 from "../images/img1_whatsinyourairbnb_home 1.png";
 import img2 from "../images/img2_whatsinyourairbnb_home 1.png";
@@ -29,6 +29,10 @@ import leaves from "../images/gifs/img_gif_home3.svg";
 import spark from "../images/gifs/img_gif_home4.svg";
 import stars from "../images/gifs/img_gif_home5.svg";
 import cypress from "../images/gifs/illustration_003.gif";
+import quotes from "../images/quotes.svg";
+import rating from "../images/rating_stars.svg";
+import olivia from "../images/user-avatars/olivia.png";
+import yifan from "../images/user-avatars/yifan.png";
 
 export default function Home() {
   // For go "back to top" button
@@ -36,6 +40,23 @@ export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const users = [
+    {
+      image: olivia,
+      reviewDate: "October 2023",
+      reviewerName: "Olivia",
+      reviewText:
+        "Great place to stay in Yucca Valley! We only stayed one night but would definitely come back for more. The house is very spacious and the yard even more. It has everything you need and is very clean. The surroundings are beautiful and really quiet. The hosts are also very accommodating and communicative!",
+    },
+    {
+      image: yifan,
+      reviewDate: "August 2023",
+      reviewerName: "Yifan",
+      reviewText:
+        "Very close to Joshua Tree National Park while the place remains away from noisy traffic and tourist. A great place to enjoy. The room is very clean and organized. Responsive host.",
+    },
+  ];
 
   const cards1 = [
     {
@@ -83,6 +104,19 @@ export default function Home() {
     },
   ];
 
+  const cards3 = [
+    {
+      image: img5,
+      title: "Cafe Serenity",
+      body: "Relish delightful moments at the cafe and savor leisurely times with your friends, all while basking in the warm glow of sunshine at our luxurious vacation rental.",
+    },
+    {
+      image: img6,
+      title: "Nature Embrace",
+      body: "Discover modern-rustic charm at this Airbnb. Walls exude elegance, bathed in soft, ancient-style lighting. Wooden floors offer a serene connection to nature.",
+    },
+  ];
+
   const amenities1 = [
     { icon: kitchen, text: "Kitchen" },
     { icon: workspace, text: "Dedicated workspace" },
@@ -116,7 +150,11 @@ export default function Home() {
               December and savor your getaway!
             </p>
           </div>
-          <a href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
+          <a
+            href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="bg-[#D33F3F] w-[140px] lg:w-[240px] text-white text-base font-black lg:text-lg border-2 border-white h-[61px] flex flex-col justify-center align-center">
               Book Now
             </div>
@@ -125,9 +163,15 @@ export default function Home() {
       </div>
       {/* WHAT'S REDPOINT */}
       <div className="lg:h-[800px] text-center flex flex-col lg:flex-row justify-between items-center gap-6">
-        <img src={pot} alt="pot on fire" className="w-[215px] hidden lg:inline" />
+        <img
+          src={pot}
+          alt="pot on fire"
+          className="w-[215px] hidden lg:inline"
+        />
         <div className="w-[350px] lg:w-[1103px] py-12 lg:py-0 flex flex-col gap-6">
-          <h2 className="text-2xl lg:text-3xl font-souvenir">What's Redpoint?</h2>
+          <h2 className="text-2xl lg:text-3xl font-souvenir">
+            What's Redpoint?
+          </h2>
           <p className="text-base lg:text-lg">
             We are a luxury vacation Airbnb for rent in Yucca Valley,
             California. Redpoint is 2h drive from Los Angeles, California, so if
@@ -161,12 +205,18 @@ export default function Home() {
       </div>
       {/* WHY CHOOSE REDPOINT? */}
       <div className="text-center bg-[#FFFFFF] w-screen py-12 lg:py-0 lg:h-[547px] flex flex-col lg:flex-row justify-center items-center gap-4">
-        <img src={leaves} alt="leaves" className="hidden lg:inline w-[86.94px] h-[82.27px]" />
+        <img
+          src={leaves}
+          alt="leaves"
+          className="hidden lg:inline w-[86.94px] h-[82.27px]"
+        />
         <div
           id="content"
           className="w-[350px] lg:w-[1103px] flex flex-col justify-center items-center text-center gap-6"
         >
-          <h2 className="text-2xl lg:text-3xl font-souvenir">Why choose Redpoint?</h2>
+          <h2 className="text-2xl lg:text-3xl font-souvenir">
+            Why choose Redpoint?
+          </h2>
           <p>94% of recent guests think we have great check-in experience!</p>
           <div className="flex flex-col lg:flex-row lg:gap-10">
             <div className="text-left lg:w-[450px]">
@@ -195,16 +245,21 @@ export default function Home() {
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
       <div className="w-[350px] lg:w-fit text-center flex flex-col py-24 gap-6">
-        <h2 className="text-2xl lg:text-3xl font-souvenir">What's in Your Airbnb</h2>
+        <h2 className="text-2xl lg:text-3xl font-souvenir">
+          What's in Your Airbnb
+        </h2>
         <p className="text-base lg:text-lg">
           Our vacation Airbnb provides everything you need for a comfortable
           stay.{" "}
-          <Link to="/about" className="text-base lg:text-lg text-[#D33F3F] font-bold underline">
+          <Link
+            to="/about"
+            className="text-base lg:text-lg text-[#D33F3F] font-bold underline"
+          >
             View Gallery
           </Link>
         </p>
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+          <div className="flex flex-row lg:flex-col gap-4">
             {cards1.map((card) => {
               return (
                 <HomeCard
@@ -215,7 +270,7 @@ export default function Home() {
               );
             })}
           </div>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row lg:flex-row gap-4">
             {cards2.map((card) => {
               return (
                 <HomeCard
@@ -241,7 +296,9 @@ export default function Home() {
           className="w-[215px] absolute bottom-8 lg:right-2"
         />
         <div className="flex flex-col gap-2 w-[350px] lg:w-[1103px]">
-          <h2 className="text-2xl lg:text-3xl font-souvenir">Redpoint Amenities</h2>
+          <h2 className="text-2xl lg:text-3xl font-souvenir">
+            Redpoint Amenities
+          </h2>
           <p className="text-base lg:text-lg">
             Indulge in the luxury of our comprehensive array of 36 amenities
             thoughtfully curated for your convenience during your stay with us.
@@ -289,9 +346,83 @@ export default function Home() {
               Read More Reviews
             </Link>
           </p>
-        </div>
-        <HomeGuestStories />
       </div>
+      <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
+      <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+        <div className="flex flex-row lg:flex-col gap-4">
+        <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+      <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
+        {users.map((user) => {
+          return (
+            <div className="flex flex-col lg:w-[605px] h-fit justify-between items-start gap-6 relative">
+              <img
+                src={quotes}
+                alt="quote symbols"
+                className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-10 lg:-top-28 -left-0 lg:-left-14"
+                />
+              <p className="w-[350px] lg:w-[486px] text-left">
+                {user.reviewText}
+              </p>
+              <div className="flex flex-row justify-start items-center gap-4">
+                <img src={user.image} alt="user" />
+                <div className="flex flex-col justify-between items-start">
+                  <div className="flex flex-row justify-between items-center gap-2">
+                    <img src={rating} alt="star rating" /> <span>&#8226;</span>{" "}
+                    <span className="text-[16px]">{user.reviewDate}</span>
+                  </div>
+                  <p className="font-extrabold">{user.reviewerName}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      </div>
+    </div>
+        </div>
+      </div>
+      </div>
+      {/* <div className="flex flex-col py-24">
+        <div className="text-center flex flex-col gap-12 items-center">
+          <h2 className="text-2xl lg:text-3xl font-souvenir">Guest Stories</h2>
+          <p className="w-[250px] lg:w-fit text-base lg:text-lg">
+            See what our guests are saying.{" "}
+            <Link to="/reviews" className="text-[#D33F3F] font-bold underline">
+              Read More Reviews
+            </Link>
+          </p>
+        </div>
+        <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+          <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
+            {users.map((user) => {
+              return (
+                <div className="flex flex-col lg:w-[605px] h-[350px] justify-between items-start gap-6 relative">
+                  <img
+                    src={quotes}
+                    alt="quote symbols"
+                    className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-20 lg:-top-28 -left-0 lg:-left-14"
+                  />
+                  <p className="w-[350px] lg:w-[486px] text-left">
+                    {user.reviewText}
+                  </p>
+                  <div className="flex flex-row justify-start items-center gap-4">
+                    <img src={user.image} alt="user" />
+                    <div className="flex flex-col justify-between items-start">
+                      <div className="flex flex-row justify-between items-center gap-2">
+                        <img src={rating} alt="star rating" />{" "}
+                        <span>&#8226;</span>{" "}
+                        <span className="text-[16px]">{user.reviewDate}</span>
+                      </div>
+                      <p className="font-extrabold">{user.reviewerName}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        {" "}
+      </div> */}
     </div>
   );
 }

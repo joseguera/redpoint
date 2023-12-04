@@ -8,7 +8,7 @@ function App() {
   const menuModal = useRef<HTMLInputElement | null>(null);
 
   return (
-    <div className="flex flex-col justify-between items-center w-full h-screen overflow-x-clip">
+    <div className="flex flex-col justify-between items-center w-full h-screen lg:overflow-x-clip">
       <Header />
       {/* <MenuModal menuModal={menuModal} /> */}
       <Outlet context={{}} />

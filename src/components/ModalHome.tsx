@@ -29,10 +29,10 @@ const ModalHome = () => {
         <>
           <div
             onClick={() => setShowModal(false)}
-            className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-[#00000085]"
+            className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none lg:bg-[#00000085]"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              <div className="w-[780px] h-[735px] border-0 rounded-lg shadow-lg relative w-full bg-white outline-none focus:outline-none py-4">
+            <div className="relative w-auto lg:my-6 mx-auto max-w-3xl pt-7 lg:pt-0">
+              <div className="w-screen lg:w-[780px] h-[735px] border-0 lg:rounded-lg shadow-lg relative w-full bg-white outline-none focus:outline-none py-4">
                 <div className="flex flex-col items-start justify-between p-6 gap-7 h-full overflow-auto overflow-x-clip">
                   <button
                     className="bg-transparent border-0 float-right"

@@ -23,29 +23,33 @@ export default function HomeGuestStories() {
   ];
 
   return (
-    <div className="flex flex-row justify-center items-start gap-4">
-      {users.map((user) => {
-        return (
-          <div className="flex flex-col lg:w-[605px] h-[350px] justify-between items-start gap-6 relative">
-            <img
-              src={quotes}
-              alt="quote symbols"
-              className="w-[249px] lg:w-[255px] h-[201px] self-start absolute -top-28 -left-0 lg:-left-14"
-            />
-            <p className="w-[350px] lg:w-[486px] text-left">{user.reviewText}</p>
-            <div className="flex flex-row justify-start items-center gap-4">
-              <img src={user.image} alt="user" />
-              <div className="flex flex-col justify-between items-start">
-                <div className="flex flex-row justify-between items-center gap-2">
-                  <img src={rating} alt="star rating" /> <span>&#8226;</span>{" "}
-                  <span className="text-[16px]">{user.reviewDate}</span>
+    <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+      <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
+        {users.map((user) => {
+          return (
+            <div className="flex flex-col lg:w-[605px] h-[350px] justify-between items-start gap-6 relative">
+              <img
+                src={quotes}
+                alt="quote symbols"
+                className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-20 lg:-top-28 -left-0 lg:-left-14"
+              />
+              <p className="w-[350px] lg:w-[486px] text-left">
+                {user.reviewText}
+              </p>
+              <div className="flex flex-row justify-start items-center gap-4">
+                <img src={user.image} alt="user" />
+                <div className="flex flex-col justify-between items-start">
+                  <div className="flex flex-row justify-between items-center gap-2">
+                    <img src={rating} alt="star rating" /> <span>&#8226;</span>{" "}
+                    <span className="text-[16px]">{user.reviewDate}</span>
+                  </div>
+                  <p className="font-extrabold">{user.reviewerName}</p>
                 </div>
-                <p className="font-extrabold">{user.reviewerName}</p>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

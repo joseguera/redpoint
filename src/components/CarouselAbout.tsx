@@ -40,7 +40,7 @@ export default function CarouselAbout() {
       {galleries.map((gallery) => {
         return (
           <div>
-            <img src={gallery.image} alt="pic" className="w-[1310px]" />
+            <img src={gallery.image} alt="pic" className="w-328px lg:w-[1310px]" />
           </div>
         )})}
     </Carousel>

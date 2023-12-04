@@ -56,13 +56,13 @@ export default function Reviews() {
       <div className='flex flex-col gap-10'>
         {/* HEADING */}
         <div id="content" className='flex flex-col items-center'>
-            <h1 className="text-[45px] font-souvenir">Reviews</h1>
-            <p>
+            <h1 className="text-2xl lg:text-3xl font-souvenir">Reviews</h1>
+            <p className='text-base text-lg'>
               See what our guests are saying.
             </p>
         </div> 
         {/* REVIEWS HOLDER */}
-        <div className='flex flex-row items-start justify-center gap-24'>
+        <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-24'>
           {/* COL 1 */}
             <div className='flex flex-col items-center w-[310px] gap-6'>
               <div className='flex flex-row justify-start gap-2'>
@@ -77,42 +77,44 @@ export default function Reviews() {
               {/* MODAL FOR VIEW ALL REVIEWS */}
               <a href="https://www.airbnb.com/rooms/786240811671591724/reviews?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
                 <div
-                  className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
+                  className="w-[350px] lg:w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
                   >
                   <img src={view} className="w-[16px]" alt="view all" />
                   <p>View all reviews</p>
                 </div>
               </a>
-              <div className='flex flex-col items-center gap-2'>
-                <p className='font-extrabold'>Overall Rating</p>
-                {overallRatings.map(rating => {
-                  return (
-                    <div className='flex flex-row items-center gap-2'>
-                      <div className='text-[#9393B0] text-[16px]'>{rating.ratingCategory}</div>
-                      <div id="outer-bar" className='w-[245px] h-[4px] bg-[#D9D9D9] rounded-sm'>
-                        <div id="inner-bar" className={`${rating.ratingTotal} h-full bg-[#272728] rounded-sm`}></div>
+              <div className='flex flex-row lg:flex-col'>
+                <div className='flex flex-col items-center gap-2'>
+                  <p className='font-extrabold'>Overall Rating</p>
+                  {overallRatings.map(rating => {
+                    return (
+                      <div className='flex flex-row items-center gap-2'>
+                        <div className='text-[#9393B0] text-[16px]'>{rating.ratingCategory}</div>
+                        <div id="outer-bar" className='w-[245px] h-[4px] bg-[#D9D9D9] rounded-sm'>
+                          <div id="inner-bar" className={`${rating.ratingTotal} h-full bg-[#272728] rounded-sm`}></div>
+                        </div>
                       </div>
-                    </div>
-                  )})}
-              </div>
-              <div>
-                {scores.map(score => {
-                  return (
-                    <div key={score.category} className='w-[279px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]'>
-                      <div className='flex -flex-row justify-between gap-4 items-center'>
-                        <div className="w-6 h-6"><img src={score.icon} alt={score.category} /></div>
-                        <div className='text-[16px]'>{score.category}</div>
+                    )})}
+                </div>
+                <div>
+                  {scores.map(score => {
+                    return (
+                      <div key={score.category} className='w-[279px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]'>
+                        <div className='flex flex-row justify-between gap-4 items-center'>
+                          <div className="w-6 h-6"><img src={score.icon} alt={score.category} /></div>
+                          <div className='text-[16px]'>{score.category}</div>
+                        </div>
+                        <div className='text-[16px] flex items-center'>{score.rating}</div>
                       </div>
-                      <div className='text-[16px] flex items-center'>{score.rating}</div>
-                    </div>
-                  )})}
+                    )})}
+                </div>
               </div>
             </div>
           {/* COL 2 */}
-          <div className='flex flex-col items-start w-[744px] gap-6'>
+          <div className='flex flex-col items-start w-[350px] lg:w-[744px] gap-6'>
             <div className='text-[24px] font-black'>{userReviews.length} Reviews</div>
             {/* FILTER REVIEWS - SEARCH BY KEYWORD */}
-            <div className='w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2'>
+            <div className='w-[350px] lg:w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2'>
               <img src={search} alt="search bar" />
               <input
                 className='text-[16px] text-[#717171] w-full'

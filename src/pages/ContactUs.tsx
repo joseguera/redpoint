@@ -12,19 +12,19 @@ export default function ContactUs() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-24 pt-16">
+    <div className="flex flex-col justify-center items-center gap-12 lg:gap-24 pt-14">
       <PageHeros heroImage="contact-hero" />
       <div className="flex flex-row items-center static">
         <img
           src={butterfly}
           alt="butterfly"
-          className="w-[78px] h-[84px] absolute top-[25rem] left-[9rem]"
+          className="w-[78px] h-[84px] hidden lg:inline absolute top-[25rem] left-[9rem]"
         />
         <div className="text-center flex flex-col justify-between items-center gap-16">
           <div className="flex flex-row justify-between items-center">
             <div className="w-[690px] flex flex-col justify-center items-center text-center gap-6">
-              <h1 className="text-[45px] font-souvenir">Contact Us</h1>
-              <p>
+              <h1 className="text-2xl lg:text-3xl font-souvenir">Contact Us</h1>
+              <p className="text-base text-lg w-[350px] lg:w-fit">
                 We're happy to answer any questions you may have. Email us at{" "}
                 <a
                   href="mailto:redpoint@mixtrip.com"
@@ -46,10 +46,10 @@ export default function ContactUs() {
               </p>
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pb-60 lg:pb-0">
             <a
               href="mailto:redpoint@mixtrip.com"
-              className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
+              className="w-[350px] lg:w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
             >
               <img src={email} className="w-[18px] h-[14px]" alt="email" />
               Email us now
@@ -58,7 +58,7 @@ export default function ContactUs() {
               href="https://www.instagram.com/redpoint_mixtrip"
               target="_blank"
               rel="noreferrer"
-              className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
+              className="w-[350px] lg:w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
             >
               <img src={instagram} className="w-[18px]" alt="instagram" />
               Visit instagram
@@ -68,7 +68,7 @@ export default function ContactUs() {
         <img
           src={tree_lights}
           alt="tree lights"
-          className="w-[219px] absolute top-[34.5rem] right-[7.5rem]"
+          className="w-[219px] absolute -bottom-[24rem] right-20 lg:top-[34.5rem] lg:right-[7.5rem]"
         />
       </div>
       <FooterHero

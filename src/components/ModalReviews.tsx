@@ -19,14 +19,14 @@ const ModalReviews: React.FC<Props> = () => {
 
   return (
     <>
-      <button
-        className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
-        type="button"
-        onClick={() => setShowModal(true)}
-      >
-        <img src={view} className="w-[16px]" alt="view all" />
-        <p>View all reviews</p>
-      </button>
+      <a href="https://www.airbnb.com/rooms/786240811671591724/reviews?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2" target="_blank"  rel="noreferrer">
+        <div
+          className="w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
+          >
+          <img src={view} className="w-[16px]" alt="view all" />
+          <p>View all reviews</p>
+        </div>
+      </a>
       {showModal ? (
         <>
           {/* MODAL BACKGROUND */}

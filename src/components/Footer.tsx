@@ -28,7 +28,7 @@ export default function Footer() {
             </div>
             <div className='flex flex-col justify-start items-start'>
               <Link className='text-[#A7B1BE]' to="/attractions">Attractions</Link>
-              <Link className='text-[#A7B1BE]' to="/contact-us">Contact</Link>
+              <Link className='text-[#A7B1BE]' to="/contact-us">Contact Us</Link>
             </div>
             <div className='flex flex-col justify-start items-start'>
               <Link className='text-[#A7B1BE]' to="/reviews">Reviews</Link>
@@ -39,7 +39,9 @@ export default function Footer() {
         </div>
         <div className='flex flex-col justify-center items-start'>
           <p className='text-xl font-black'>Social media</p>
-          <img src={instagramLogo} className='w-[24px]' alt="instagram" />
+          <a href="https://www.instagram.com/redpoint_mixtrip" target="_blank"  rel="noreferrer">
+            <img src={instagramLogo} className='w-[24px]' alt="instagram" />
+          </a>
         </div>
       </div>
       <div className='text-[#A7B1BE]'>Copyright © {currentYear} Mixtrip.</div>

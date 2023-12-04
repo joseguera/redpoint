@@ -1,5 +1,17 @@
 import React, { useState } from "react";
-import { bathroomFeatures, bedroomLaundryFeatures } from "../utils";
+import {
+  bathroomFeatures,
+  bedroomLaundryFeatures,
+  entertainmentFeatures,
+  familyFeatures,
+  heatingCoolingFeatures,
+  homeSafetyFeatures,
+  internetOfficeFeatures,
+  kitchenDiningFeatures,
+  locationFeatures,
+  outdoorFeatures,
+  parkingFeatures
+} from "../utils";
 import x_closer from "../images/icons/x-closer.svg";
 
 const ModalHome = () => {
@@ -20,8 +32,8 @@ const ModalHome = () => {
             className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-[#00000085]"
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              <div className="w-[780px] h-[735px] border-0 rounded-lg shadow-lg relative w-full bg-white outline-none focus:outline-none">
-                <div className="flex flex-col items-start justify-between p-6 gap-7">
+              <div className="w-[780px] h-[735px] border-0 rounded-lg shadow-lg relative w-full bg-white outline-none focus:outline-none py-4">
+                <div className="flex flex-col items-start justify-between p-6 gap-7 h-full overflow-auto overflow-x-clip">
                   <button
                     className="bg-transparent border-0 float-right"
                     onClick={() => setShowModal(false)}
@@ -54,6 +66,186 @@ const ModalHome = () => {
                   <p className="font-black">Bedroom and laundry</p>
                   <div className="flex flex-col gap-4">
                     {bedroomLaundryFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Entertainment</p>
+                  <div className="flex flex-col gap-4">
+                    {entertainmentFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Family</p>
+                  <div className="flex flex-col gap-4">
+                    {familyFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Heating and cooling</p>
+                  <div className="flex flex-col gap-4">
+                    {heatingCoolingFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Home safety</p>
+                  <div className="flex flex-col gap-4">
+                    {homeSafetyFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Internet and office</p>
+                  <div className="flex flex-col gap-4">
+                    {internetOfficeFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Kitchen and dining</p>
+                  <div className="flex flex-col gap-4">
+                    {kitchenDiningFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Location features</p>
+                  <div className="flex flex-col gap-4">
+                    {locationFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Outdoor</p>
+                  <div className="flex flex-col gap-4">
+                    {outdoorFeatures.map((feature) => {
+                      return (
+                        <div
+                          key={feature.category}
+                          className="w-[716px] h-10 flex flex-row justify-between border-b border-[#DDDDDD]"
+                        >
+                          <div className="flex flex-row justify-between gap-4 items-start">
+                            <div className="w-6 h-6">
+                              <img src={feature.icon} alt={feature.category} />
+                            </div>
+                            <div>
+                              {feature.category}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="font-black">Parking and facilities</p>
+                  <div className="flex flex-col gap-4">
+                    {parkingFeatures.map((feature) => {
                       return (
                         <div
                           key={feature.category}

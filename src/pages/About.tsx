@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import PageHeros from "../components/PageHeros";
 import CarouselAbout from "../components/CarouselAbout";
 import FooterHero from "../components/FooterHero";
-import mainImage from '../images/photo-gallery/13.png'
+import mainImage from "../images/photo-gallery/13.png";
+import butterfly1 from "../images/gifs/img_gif_about1.svg";
+import butterfly2 from "../images/gifs/img_gif_about2.svg";
 
 export default function About() {
-
   const galleryButtons = [
     { name: "All", image: "" },
     { name: "Living Room", image: "" },
@@ -17,21 +18,28 @@ export default function About() {
     { name: "Bedroom 2", image: "" },
     { name: "Bedroom 3", image: "" },
     { name: "Backyard", image: "" },
-    { name: "Kitchen", image: "" }
+    { name: "Kitchen", image: "" },
   ];
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center pt-16">
       <PageHeros heroImage="about-hero" />
       {/* REDPOINT'S STORY */}
-      <div className="text-center w-screen flex flex-row items-center justify-between py-24">
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
-        </div>
+      <div className="text-center w-screen flex flex-row items-center justify-center py-24 relative">
+        <img
+          src={butterfly1}
+          alt="butterfly 1"
+          className="w-[109px] absolute top-28 left-24"
+        />
+        <img
+          src={butterfly2}
+          alt="butterfly 2"
+          className="w-[83px] absolute bottom-20 right-32"
+        />
         <div
           id="content"
           className="w-[690px] flex flex-col justify-center items-center text-center gap-6"
@@ -45,9 +53,6 @@ export default function About() {
             testament to the adventurous spirit that permeates every aspect of
             the accommodations offered at Redpoint.
           </p>
-        </div>
-        <div id="gif" className="w-12 h-12 bg-[#D33F3F]">
-          gif
         </div>
       </div>
       {/* PHOTO GALLERY BUTTONS */}

@@ -10,7 +10,7 @@ export default function Header() {
           <img src={logo} alt="redpoint logo" className="w-[216px] h-[64px]" />
         </Link>
       </div>
-      <div className="flex flex-row justify-center items-center h-16">
+      <div className="hidden lg:flex flex-row justify-center items-center h-16">
         <Link
           to="/"
           className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"

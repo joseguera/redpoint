@@ -1,5 +1,6 @@
 // USER PICTURES
 import rating from './images/rating_stars.svg';
+import rating_4_stars from './images/rating_4_stars.svg';
 import olivia from './images/user-avatars/olivia.png';
 import venkata from './images/user-avatars/venkata.png';
 import yifan from './images/user-avatars/yifan.png';
@@ -48,6 +49,37 @@ import hot_water from './images/icons/bath-and-shower_svgrepo.com.svg';
 import washer from "./images/icons/washing-machine_svgrepo.com.svg";
 import dryer from "./images/icons/washing-machine_svgrepo.com-1.svg";
 import essentials from './images/icons/toilet-paper-dots_svgrepo.com.svg';
+import hangers from './images/icons/hanger_svgrepo.com.svg';
+import bed_linens from './images/icons/toilet-paper-dots_svgrepo.com.svg';
+import pillow from './images/icons/bed-bold_svgrepo.com.svg';
+import iron from './images/icons/iron_svgrepo.com.svg';
+import entrance from './images/icons/door-closed_svgrepo.com.svg'
+import patio from './images/icons/patio_svgrepo.com.svg'
+import backyard from './images/icons/flower-heart_svgrepo.com.svg'
+import bbq from './images/icons/grill_svgrepo.com.svg'
+import parking from './images/icons/car_svgrepo.com.svg'
+import kitchen from './images/icons/kitchen-pack-spoon_svgrepo.com.svg'
+import refrigerator from './images/icons/refrigerator-round-695_svgrepo.com.svg'
+import microwave from './images/icons/microwave_svgrepo.com.svg'
+import cooking from './images/icons/spatula_svgrepo.com.svg'
+import dishes from './images/icons/dishes-plate_svgrepo.com.svg'
+import dishwasher from './images/icons/dishwasher_svgrepo.com.svg'
+import stove from './images/icons/stove_svgrepo.com.svg'
+import oven from './images/icons/oven_svgrepo.com.svg'
+import coffee from './images/icons/coffee-maker_svgrepo.com.svg'
+import security from './images/icons/security-camera-cctv_svgrepo.com.svg'
+import smoke from './images/icons/smoke-alarm_svgrepo.com.svg'
+import carbon from './images/icons/fire-alarm_svgrepo.com.svg'
+import extinguisher from './images/icons/fire-extinguisher-safety_svgrepo.com.svg'
+import first_aid from './images/icons/first-aid-kit_svgrepo.com.svg'
+import wifi from './images/icons/wifi_svgrepo.com.svg'
+import workspace from './images/icons/desk_svgrepo.com.svg'
+import tv from './images/icons/tv-alt_svgrepo.com.svg';
+import fireplace from './images/icons/fireplace-heating_svgrepo.com.svg';
+import air_conditioning from './images/icons/air-conditioning_svgrepo.com.svg';
+import indoor_fireplace from './images/icons/fireplace_svgrepo.com.svg';
+import heating from './images/icons/temperature-arrow-up_svgrepo.com.svg';
+
 
 interface UserEntry {
     name: string; 
@@ -100,7 +132,7 @@ export const userReviews: UserEntry[] = [
     { name: "Aimee", location: "9 months on Airbnb", image: aimee, rating: rating, reviewDate: "February 2023", notes: "", reviewPost: "The second time I came to the desert, the house felt very good, and the host was very thoughtful at first glance.Thinking about all our needs, especially the queen bed in the yard, where you can lie in the yard and watch the stars.It's so beautiful, definitely worth the trip, we'll introduce our friends to try it out." },
     { name: "Rui", location: "2 years on Airbnb", image: rui, rating: rating, reviewDate: "January 2023", notes: "", reviewPost: "It is a lovely place to stay if you are exploring Joshua Tree, especially if you are climbers!!!!! They provided 2 free, like new big crash pads, also has tension hanging board in living room, so great for morning finger warm up. The back yard is big, it's great to stay outside enjoying the night view (tons of stars, you can even see galaxies in late night). They have a double bed in the backyard, you can actually lying on the bed and staring at the night sky, so relaxing. Well designed and clean room, very comfortable bed. Kitchen has equipped everything we need. Very easy to communicate with clear instructions. We will definitely come back next time if we are back in Joshua Tree." },
     { name: "Mary", location: "Inglewood, California", image: mary, rating: rating, reviewDate: "January 2023", notes: "Stayed with kids", reviewPost: "Amazing place! I absolutely loved the open concept layout. The yard was beautiful and location was great. Everything about this home was well thought out. It is great place to hang and unwind. My kids loved this place. I will definitely be back. :)" },
-    { name: "Annie", location: "Los Angeles, California", image: annie, rating: rating, reviewDate: "January 2023", notes: "", reviewPost: "Very communicative host, house was very clean. Bedrooms are decent size and bathrooms seem newly renovated. Thank you!" },
+    { name: "Annie", location: "Los Angeles, California", image: annie, rating: rating_4_stars, reviewDate: "January 2023", notes: "", reviewPost: "Very communicative host, house was very clean. Bedrooms are decent size and bathrooms seem newly renovated. Thank you!" },
     { name: "Ashwin", location: "3 years on Airbnb", image: ashwin, rating: rating, reviewDate: "December 2022", notes: "", reviewPost: "This airbnb was probably the best equipped of all the airbnb's I've ever stayed at. I wish I had the time to enjoy the massive backyard and all the equipment in the garage (they even have crash pads available). The house was well appointed with probably the most well stocked kitchen. While we had a couple challenges getting into the house initially, the host was super responsive and we were able to resolve that issue shortly. In addition, the host went above and beyond in retrieving and shipping us an item that we accidentally discarded. Overall, an absolutely fantastic experience!" },
 ];
 
@@ -124,21 +156,90 @@ export const scores: Score[] = [
 ];
 
 export const overallRatings: Rating[] = [
-    { ratingCategory: 5, ratingTotal: "w-4/5"  },
-    { ratingCategory: 4, ratingTotal: "w-1/5"  },
-    { ratingCategory: 3, ratingTotal: "w-3/5"  },
-    { ratingCategory: 2, ratingTotal: "w-2/5"  },
+    { ratingCategory: 5, ratingTotal: "w-11/12"  },
+    { ratingCategory: 4, ratingTotal: "w-1/12"  },
+    { ratingCategory: 3, ratingTotal: "w-0"  },
+    { ratingCategory: 2, ratingTotal: "w-0"  },
     { ratingCategory: 1, ratingTotal: "w-0"  },
   ];
 
+// Bathroom
 export const bathroomFeatures: Feature[] = [
     { icon: hair_dryer, category: "Hair Dryer" },
     { icon: shampoo, category: "Shampoo" },
     { icon: hot_water, category: "Hot Water" }
 ];
 
+// Bedroom and laundry
 export const bedroomLaundryFeatures: Feature[] = [
     { icon: washer, category: "Washer" },
     { icon: dryer, category: "Dryer" },
-    { icon: essentials, category: "Essentials" }
+    { icon: essentials, category: "Essentials" },
+    { icon: hangers, category: "Hangers" },
+    { icon: bed_linens, category: "Bed linens" },
+    { icon: pillow, category: "Extra pillows and blankets" },
+    { icon: iron, category: "iron" }
+];
+
+// Entertainment
+export const entertainmentFeatures: Feature[] = [
+    { icon: tv, category: "TV" },
+];
+
+// Family
+export const familyFeatures: Feature[] = [
+    { icon: fireplace, category: "Fireplace guards" },
+];
+
+// Heating and cooling
+export const heatingCoolingFeatures: Feature[] = [
+    { icon: air_conditioning, category: "Air conditioning" },
+    { icon: indoor_fireplace, category: "Indoor fireplace" },
+    { icon: heating, category: "Heating" }
+];
+
+// Home safety
+export const homeSafetyFeatures: Feature[] = [
+    { icon: security, category: "Security cameras on property" },
+    { icon: smoke, category: "Smoke alarm" },
+    { icon: carbon, category: "Carbon monoxide alarm" },
+    { icon: extinguisher, category: "Fire extinguisher" },
+    { icon: first_aid, category: "First aid kit" }
+];
+
+// Internet and office
+export const internetOfficeFeatures: Feature[] = [
+    { icon: wifi, category: "Wifi" },
+    { icon: workspace, category: "Dedicated workspace" }
+
+];
+
+// Kitchen and dining
+export const kitchenDiningFeatures: Feature[] = [
+    { icon: kitchen, category: "Kitchen" },
+    { icon: refrigerator, category: "Refrigerator" },
+    { icon: microwave, category: "Microwave" },
+    { icon: cooking, category: "Cooking basics" },
+    { icon: dishes, category: "Dishes and silverware" },
+    { icon: dishwasher, category: "Dishwasher" },
+    { icon: stove, category: "Stove" },
+    { icon: oven, category: "Oven" },
+    { icon: coffee, category: "Coffee maker" }
+];
+
+// Location features
+export const locationFeatures: Feature[] = [
+    { icon: entrance, category: "Private entrance" },
+];
+
+// Outdoor
+export const outdoorFeatures: Feature[] = [
+    { icon: patio, category: "Patio or balcony" },
+    { icon: backyard, category: "Backyard" },
+    { icon: bbq, category: "BBQ grill" }
+];
+
+// Parking and facilities
+export const parkingFeatures: Feature[] = [
+    { icon: parking, category: "Free parking on premises" },
 ];

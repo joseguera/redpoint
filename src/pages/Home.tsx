@@ -38,8 +38,8 @@ export default function Home() {
   // For go "back to top" button
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   const users = [
     {
@@ -346,83 +346,47 @@ export default function Home() {
               Read More Reviews
             </Link>
           </p>
-      </div>
-      <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
-      <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
-        <div className="flex flex-row lg:flex-col gap-4">
-        <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
-      <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
-        {users.map((user) => {
-          return (
-            <div className="flex flex-col lg:w-[605px] h-fit justify-between items-start gap-6 relative">
-              <img
-                src={quotes}
-                alt="quote symbols"
-                className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-10 lg:-top-28 -left-0 lg:-left-14"
-                />
-              <p className="w-[350px] lg:w-[486px] text-left">
-                {user.reviewText}
-              </p>
-              <div className="flex flex-row justify-start items-center gap-4">
-                <img src={user.image} alt="user" />
-                <div className="flex flex-col justify-between items-start">
-                  <div className="flex flex-row justify-between items-center gap-2">
-                    <img src={rating} alt="star rating" /> <span>&#8226;</span>{" "}
-                    <span className="text-[16px]">{user.reviewDate}</span>
-                  </div>
-                  <p className="font-extrabold">{user.reviewerName}</p>
+        </div>
+        <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
+          <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+            <div className="flex flex-row lg:flex-col gap-4">
+              <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+                <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
+                  {users.map((user) => {
+                    return (
+                      <div className="flex flex-col lg:w-[605px] h-fit justify-between items-start gap-6 relative">
+                        <img
+                          src={quotes}
+                          alt="quote symbols"
+                          className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-10 lg:-top-28 -left-0 lg:-left-14"
+                        />
+                        <p className="w-[350px] lg:w-[486px] text-left">
+                          {user.reviewText}
+                        </p>
+                        <div className="flex flex-row justify-start items-center gap-4">
+                          <img src={user.image} alt="user" />
+                          <div className="flex flex-col justify-between items-start">
+                            <div className="flex flex-row justify-between items-center gap-2">
+                              <img src={rating} alt="star rating" />{" "}
+                              <span>&#8226;</span>{" "}
+                              <span className="text-[16px]">
+                                {user.reviewDate}
+                              </span>
+                            </div>
+                            <p className="font-extrabold">
+                              {user.reviewerName}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
-      </div>
-    </div>
-        </div>
-      </div>
-      </div>
-      {/* <div className="flex flex-col py-24">
-        <div className="text-center flex flex-col gap-12 items-center">
-          <h2 className="text-2xl lg:text-3xl font-souvenir">Guest Stories</h2>
-          <p className="w-[250px] lg:w-fit text-base lg:text-lg">
-            See what our guests are saying.{" "}
-            <Link to="/reviews" className="text-[#D33F3F] font-bold underline">
-              Read More Reviews
-            </Link>
-          </p>
-        </div>
-        <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
-          <div className="flex flex-row lg:flex-col lg:flex-row gap-4">
-            {users.map((user) => {
-              return (
-                <div className="flex flex-col lg:w-[605px] h-[350px] justify-between items-start gap-6 relative">
-                  <img
-                    src={quotes}
-                    alt="quote symbols"
-                    className="w-[149px] lg:w-[255px] h-[201px] self-start absolute -top-20 lg:-top-28 -left-0 lg:-left-14"
-                  />
-                  <p className="w-[350px] lg:w-[486px] text-left">
-                    {user.reviewText}
-                  </p>
-                  <div className="flex flex-row justify-start items-center gap-4">
-                    <img src={user.image} alt="user" />
-                    <div className="flex flex-col justify-between items-start">
-                      <div className="flex flex-row justify-between items-center gap-2">
-                        <img src={rating} alt="star rating" />{" "}
-                        <span>&#8226;</span>{" "}
-                        <span className="text-[16px]">{user.reviewDate}</span>
-                      </div>
-                      <p className="font-extrabold">{user.reviewerName}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
-        {" "}
-      </div> */}
+      </div>
     </div>
   );
 }

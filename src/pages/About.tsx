@@ -44,7 +44,9 @@ export default function About() {
           id="content"
           className="w-[350px] lg:w-[690px] flex flex-col justify-center items-center text-center gap-6"
         >
-          <h1 className="text-2xl lg:text-3xl font-souvenir">Redpoint's Story</h1>
+          <h1 className="text-2xl lg:text-3xl font-souvenir">
+            Redpoint's Story
+          </h1>
           <p className="text-base lg:text-lg">
             Daisy, the founder of the vacation Airbnb known as Redpoint, drew
             inspiration from her passion for bouldering when choosing the name.
@@ -62,17 +64,22 @@ export default function About() {
       >
         <div className="flex flex-col justify-center items-center gap-10 py-10 lg:py-24">
           <h2 className="text-2xl lg:text-3xl font-souvenir">Photo Gallery</h2>
-          <div className="overflow-x-hidden overflow-y-auto flex flex-row justify-start lg:flex-wrap items-center lg:w-[1312px] pb-4 gap-6 gap-x-12">
-            {galleryButtons.map((button) => {
-              return (
-                <div
-                  key={button.name}
-                  className="rounded-[21.5px] w-[168.01px] h-[43px] bg-[#D33F3F] flex justify-center items-center hover:cursor-pointer"
-                >
-                  {button.name}
-                </div>
-              );
-            })}
+
+          <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
+            <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
+              <div className="flex flex-row lg:flex-col gap-4">
+                {galleryButtons.map((button) => {
+                  return (
+                    <div
+                      key={button.name}
+                      className="rounded-[21.5px] w-[168.01px] h-[43px] bg-[#D33F3F] flex justify-center items-center hover:cursor-pointer"
+                    >
+                      {button.name}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
         {/* PHOTO GALLERY */}

@@ -47,7 +47,7 @@ export default function Attractions() {
   // console.log(result('present'));
 
   return (
-    <div className="flex flex-col justify-center items-center gap-16 lg:gap-24 pt-14">
+    <div className="flex flex-col justify-center items-center gap-16 lg:gap-24 pt-14 static">
       <PageHeros heroImage="attractions-hero" />
       <div
         id="content"
@@ -85,9 +85,9 @@ export default function Attractions() {
       </div>
       {/* MOBILE DROPDOWN MENU */}
       <div className="lg:hidden dropdown text-base">
-        <div onClick={() => setDropdownOpen(true)} className="dropbtn w-[350px] h-[60px] border border-[#272728] flex flex-row justify-between items-center">
+        <div onClick={() => setDropdownOpen(!dropdownOpen)} className="dropbtn w-[350px] h-[60px] border border-[#272728] flex flex-row justify-between items-center">
           <div className="w-3/4 flex flex-row justify-center pl-16">
-            <span className="self-end">All</span>
+            <span className="self-end">{activity.charAt(0).toUpperCase() + activity.substring(1)}</span>
           </div>
           <div className="w-1/4 flex flex-row justify-center">
             <img className={``} src={dropdown_arrow} alt="arrow" />
@@ -95,9 +95,9 @@ export default function Attractions() {
         </div>
         <div className={`${dropdownOpen ? "inline" : "hidden"}`}>
           {/* old className dropdownOpen */}
-          <div onClick={() => setDropdownOpen(false)} className={` ${dropdownOpen ? "inline" : "hidden"} w-[350px] h-[60px] border border-[#272728] flex justify-center items-center`}>All</div>
-          <div onClick={() => setDropdownOpen(false)} className={` ${dropdownOpen ? "inline" : "hidden"}w-[350px] h-[60px] border border-[#272728] flex justify-center items-center`}>Shopping</div>
-          <div onClick={() => setDropdownOpen(false)} className={` ${dropdownOpen ? "inline" : "hidden"}w-[350px] h-[60px] border border-[#272728] flex justify-center items-center`}>Attractions</div>
+          <div onClick={() => {setDropdownOpen(false); setActivity("all")}} className={` ${dropdownOpen ? "inline" : "hidden"} w-[350px] h-[60px] border border-t-0 border-b-0 border-[#272728] flex justify-center items-center hover:bg-white`}>All</div>
+          <div onClick={() => {setDropdownOpen(false); setActivity("shopping")}} className={` ${dropdownOpen ? "inline" : "hidden"}w-[350px] h-[60px] border border-b-0 border-[#272728] flex justify-center items-center hover:bg-white`}>Shopping</div>
+          <div onClick={() => {setDropdownOpen(false); setActivity("attractions")}} className={` ${dropdownOpen ? "inline" : "hidden"}w-[350px] h-[60px] border border border-[#272728] flex justify-center items-center hover:bg-white`}>Attractions</div>
         </div>
       </div>
       {/* ATTRACTION COMPONENT */}

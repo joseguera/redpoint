@@ -25,22 +25,22 @@ export default function CarouselAbout() {
       infiniteLoop={true}
       showStatus={false}
       showThumbs={true}
-      centerMode={true}
+      centerMode={false}
       centerSlidePercentage={100}
-      width={1312}
-      thumbWidth={215}
-    //   onChange={onChange}
-    //   onClickItem={onClickItem}
-    //   onClickThumb={onClickThumb}
+      // width={1312}
+      width={382}
+      // mobile => 382
+      // thumbWidth={215}
+      thumbWidth={96}
+      // mobile => 96
+      preventMovementUntilSwipeScrollTolerance={true}
+      swipeScrollTolerance={5}
+
     >
-        {/* <div>
-            <img src={articles[2].image} alt="pic" />
-            <p className="legend">Legend 1</p>
-          </div> */}
       {galleries.map((gallery) => {
         return (
           <div>
-            <img src={gallery.image} alt="pic" className="w-328px lg:w-[1310px]" />
+            <img src={gallery.image} alt="pic" />
           </div>
         )})}
     </Carousel>

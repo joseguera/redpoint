@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/final-redpoint-logo-design 1.svg";
+import logo from "../images/redpoint_logo_svg_file.svg";
 import burger from "../images/mobile/burger_menu.svg";
 import x_closer from "../images/mobile/x_closer_menu.svg";
 import home_icon from "../images/mobile/home-1_svgrepo.com.svg";
@@ -23,19 +23,19 @@ export default function Header() {
   return (
     <>
       <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 lg:gap-10 z-20 drop-shadow-lg">
-        <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="w-[45px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out">
           <img
             src={mobileMenuOpen ? x_closer : burger}
+            className={`${mobileMenuOpen ? "w-[16px] h-[16px]" : "w-[24px] h-[15px]"}`}
             alt="open menu"
-            className={`w-[65px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out`}
           />
         </div>
         <div>
-          <Link to="/">
+          <Link to="/" className="flex items-center">
             <img
               src={logo}
               alt="redpoint logo"
-              className="w-[216px] h-[64px]"
+              className="w-[182.25px] h-[54px] absolute left-10 lg:left-0 lg:w-[350px] lg:h-[104px]"
             />
           </Link>
         </div>

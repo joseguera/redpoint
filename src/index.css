@@ -32,65 +32,99 @@ input {
 
 .hero {
   background-image: url('../src/images/home_heroimage_1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .attractions-hero {
-  background-image: url('../src/images/page-heros/attractions_topimage\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../src/images/page-heros/img_header_attractions.webp');
 }
 
 .reviews-hero {
-  background-image: url('../src/images/page-heros/reviews_topimage\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../src/images/page-heros/img_header_reviews.webp');
 }
 
 .about-hero {
-  background-image: url('../src/images/page-heros/about_topimage\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../src/images/page-heros/img_about_header.webp');
 }
 
 .contact-hero {
-  background-image: url('../src/images/page-heros/contactus_topimage\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../src/images/page-heros/img_header_contactus.webp');
 }
 
 /* Page Footers */
 
 .home-footer {
   background-image: url('../src/images/img_home_bookredpoint\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .attractions-footer {
   background-image: url('../src/images/img_attractions_bookredpoint\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .reviews-footer {
   background-image: url('../src/images/img_reviews_bookredpoint\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .about-footer {
   background-image: url('../src/images/img_about_bookredpoint\ 1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .contact-footer {
   background-image: url('../src/images/img_contactus_bookredpoint\ 1.png');
+}
+
+.hero,
+.attractions-hero,
+.reviews-hero,
+.about-hero,
+.contact-hero,
+.home-footer,
+.attractions-footer,
+.reviews-footer,
+.about-footer,
+.contact-footer {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 50% 0;
 }
+
+
+
+/* CENTER OVERSIZED IMAGE */
+/* 
+  will apply styles only if your browser's viewport width
+  is equal to or narrower than 1250px
+*/
+@media (max-width: 576px) {
+  /* .attractions-hero {
+    background-image: url('../src/images/page-heros/img_header_attractions.webp');
+    
+  } */
+}
+
+/* FOOTER MEDIA QUERIES FOR ALL SCREENS */
+/* 
+
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        '2xl': '1366px',
+        
+        '3xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+        
+        '4xl': '2560px'
+
+*/
+
 
 .pagination-container {
   display: flex;

@@ -304,7 +304,7 @@ export default function Home() {
             thoughtfully curated for your convenience during your stay with us.
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between">
+        <div className="flex flex-col lg:flex-row justify-between gap-4 lg:gap-0">
           <div className="flex flex-col gap-4">
             {amenities1.map((amenity) => {
               return (

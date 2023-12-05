@@ -24,7 +24,8 @@ export default function ContactUs() {
           <div className="flex flex-row justify-between items-center">
             <div className="w-[690px] flex flex-col justify-center items-center text-center gap-6">
               <h1 className="text-2xl lg:text-3xl font-souvenir">Contact Us</h1>
-              <p className="text-base text-lg w-[350px] lg:w-fit">
+              {/* DESKTOP VERSION */}
+              <p className="text-base hidden lg:inline text-lg w-[350px] lg:w-fit">
                 We're happy to answer any questions you may have. Email us at{" "}
                 <a
                   href="mailto:redpoint@mixtrip.com"
@@ -33,6 +34,33 @@ export default function ContactUs() {
                   redpoint@mixtrip.com
                 </a>
                 , and we'll get back to you as soon as possible! Visit our
+                instagram{" "}
+                <a
+                  href="https://www.instagram.com/redpoint_mixtrip"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[#D33F3F] font-bold"
+                >
+                  redpoint_mixtrip
+                </a>{" "}
+                to get updates of Redpoint!
+              </p>
+              {/* MOBILE VERSION */}
+              <p className="text-base lg:hidden text-lg w-[350px] lg:w-fit">
+                We're happy to answer any questions you may have. 
+                <br />
+                <br />
+                Email us at{" "}
+                <a
+                  href="mailto:redpoint@mixtrip.com"
+                  className="text-[#D33F3F] font-bold"
+                >
+                  redpoint@mixtrip.com
+                </a>
+                , and we'll get back to you as soon as possible!
+                <br />
+                <br />
+                Visit our
                 instagram{" "}
                 <a
                   href="https://www.instagram.com/redpoint_mixtrip"
@@ -68,7 +96,7 @@ export default function ContactUs() {
         <img
           src={tree_lights}
           alt="tree lights"
-          className="w-[219px] absolute -bottom-[30rem] right-20 md:-bottom-[15rem] md:right-[13.5rem] lg:top-[34.5rem] lg:right-[7.5rem]"
+          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[15rem] md:right-[13.5rem] lg:-bottom-[13rem] lg:right-[4rem] xl:top-[34.5rem] xl:right-[7.5rem]"
         />
       </div>
       <FooterHero

@@ -72,7 +72,7 @@ export default function Reviews() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <h3 className="text-[16px] font-extrabold">Guest Favorite</h3>
-              <p className="text-[#717171] text-[16px] text-center">
+              <p className="text-[#717171] text-[14px] text-center">
                 One of the most loved homes on Airbnb based on ratings, reviews,
                 and reliability
               </p>

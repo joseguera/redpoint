@@ -20,8 +20,8 @@ export default function Footer() {
       </Link>
       <div className="border-b border-[#29303C] w-full lg:mt-5"></div>
 
-      <div className="lg:h-[267px] flex flex-col justify-start gap-12 lg:items-start lg:-ml-16">
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:justify-start gap-8 lg:gap-20 xl:gap-[10rem] 2xl:gap-[8rem]">
+      <div className="lg:h-[267px] flex flex-col justify-start gap-12 md:-ml-56 lg:items-start lg:-ml-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:justify-start gap-8 lg:gap-8 xl:gap-[5rem] 2xl:gap-[8rem]">
         <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 lg:mt-8">
           <p className="text-lg lg:mb-5 lg:text-ml font-black">Email us at</p>
           <a
@@ -33,9 +33,9 @@ export default function Footer() {
         </div>
         <img className="hidden lg:inline " src={vertical_line} alt="separator" />
         <div className="w-fit flex flex-col justify-center items-start">
-          <div className="flex flex-col justify-center items-start gap-4 lg:-ml-12 xl:gap-0 xl:mx-12 xl:-ml-24 lg:mt-8">
+          <div className="flex flex-col justify-center items-start gap-4 lg:-ml-4 xl:gap-0 xl:mx-16 xl:-ml-12 lg:mt-8">
             <p className="text-lg lg:mb-5 lg:text-ml font-black">All pages</p>
-            <div className="flex flex-col lg:flex-row justify-between items-start w-64 gap-2 lg:gap-16 xl:gap-24">
+            <div className="flex flex-col lg:flex-row justify-between items-start w-64 gap-2 lg:gap-10 xl:gap-24">
               <div className="flex flex-col justify-start items-start gap-2 lg:gap-4">
                 <Link className="text-base lg:text-lg text-[#A7B1BE]" to="/">
                   Home
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
         <img className="hidden lg:inline" src={vertical_line} alt="separator" />
-        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 lg:-ml-16 2xl:-ml-24 3xl:-ml-20 lg:mt-8">
+        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 xl:-ml-12 2xl:-ml-24 3xl:-ml-20 lg:mt-8">
           <p className="text-lg lg:mb-5 lg:text-ml font-black">Social media</p>
           <a
             href="https://www.instagram.com/redpoint_mixtrip"

@@ -18,9 +18,9 @@ export default function ContactUs() {
         <img
           src={butterfly}
           alt="butterfly"
-          className="w-[78px] h-[84px] hidden lg:inline absolute top-[25rem] left-[9rem]"
+          className="w-[78px] h-[84px] hidden xl:inline absolute top-[25rem] left-[9rem]"
         />
-        <div className="text-center flex flex-col justify-between items-center gap-16">
+        <div className="text-center flex flex-col justify-between items-center gap-16 lg:pb-48">
           <div className="flex flex-row justify-between items-center">
             <div className="w-[690px] flex flex-col justify-center items-center text-center gap-6">
               <h1 className="text-2xl lg:text-3xl font-souvenir">Contact Us</h1>
@@ -96,7 +96,7 @@ export default function ContactUs() {
         <img
           src={tree_lights}
           alt="tree lights"
-          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[15rem] md:right-[13.5rem] lg:-bottom-[13rem] lg:right-[4rem] xl:top-[34.5rem] xl:right-[7.5rem]"
+          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[28rem] md:right-[13.5rem] lg:-bottom-[20rem] lg:right-[20rem] xl:top-[34.5rem] xl:right-[1rem]"
         />
       </div>
       <FooterHero

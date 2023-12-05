@@ -60,7 +60,7 @@ export default function Reviews() {
           <p className="text-base text-lg">See what our guests are saying.</p>
         </div>
         {/* REVIEWS HOLDER */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 lg:gap-6">
           {/* COL 1 */}
           <div className="flex flex-col items-center w-[310px] gap-6">
             <div className="flex flex-row justify-start gap-2">
@@ -115,7 +115,7 @@ export default function Reviews() {
                     })}
                   </div>
                   {/* MOBILE SCORES */}
-                  <div className="md:hidden lg:hidden flex flex-row gap-4 px-4">
+                  <div className="lg:hidden flex flex-row gap-4 px-4">
                     {scores.map((score) => {
                       return (
                         <div
@@ -138,7 +138,7 @@ export default function Reviews() {
                 </div>
               </div>
               {/* DESKTOP SCORES */}
-              <div className="hidden md:inline lg:inline">
+              <div className="hidden lg:inline">
                 {scores.map((score) => {
                   return (
                     <div
@@ -161,12 +161,12 @@ export default function Reviews() {
             </div>
           </div>
           {/* COL 2 */}
-          <div className="flex flex-col items-start w-[350px] lg:w-[744px] gap-6">
+          <div className="flex flex-col items-start w-[350px] lg:w-[600px] xl:w-[744px] gap-6">
             <div className="text-[24px] font-black">
               {userReviews.length} Reviews
             </div>
             {/* FILTER REVIEWS - SEARCH BY KEYWORD */}
-            <div className="w-[350px] lg:w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2">
+            <div className="w-[350px] lg:w-[600px] xl:w-[743px] h-[40px] rounded-full border border-[#272728] px-2 flex flex-row justify-start items-center gap-2">
               <img src={search} alt="search bar" />
               <input
                 className="text-[16px] text-[#717171] w-full"
@@ -175,7 +175,7 @@ export default function Reviews() {
                 value={keyword}
               />
             </div>
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 md:gap-16">
               {users
                 .filter((user) =>
                   user.reviewPost.toLowerCase().includes(keyword.toLowerCase())

@@ -144,7 +144,7 @@ export default function Home() {
             <h1 className="text-2xl xl:text-3xl font-souvenir text-white">
               Serene Moments
             </h1>
-            <p className="text-base xl:text-lg w-[350px] xl:w-[690px] text-white">
+            <p className="text-base xl:text-lg w-[350px] md:w-[400px] lg:w-[650px] xl:w-[690px] text-white">
               Experience tranquility before the holiday rush. Retreat to a cozy
               vacation Airbnb exclusively for yourself during the first half of
               December and savor your getaway!
@@ -162,13 +162,13 @@ export default function Home() {
         </div>
       </div>
       {/* WHAT'S REDPOINT */}
-      <div className="xl:h-[800px] text-center flex flex-col xl:flex-row justify-between items-center gap-6">
+      <div className="xl:h-[800px] text-center flex flex-col xl:flex-row justify-between items-center gap-6 xl:gap-0">
         <img
           src={pot}
           alt="pot on fire"
           className="w-[215px] hidden xl:inline"
         />
-        <div className="w-[350px] xl:w-[1103px] py-12 xl:py-0 flex flex-col gap-6">
+        <div className="w-[350px] md:w-[600px] lg:w-[650px] xl:w-[1103px] py-12 xl:py-0 flex flex-col gap-6">
           <h2 className="text-2xl xl:text-3xl font-souvenir">
             What's Redpoint?
           </h2>
@@ -204,7 +204,7 @@ export default function Home() {
         <img src={swing} alt="relax swing" className="w-[215px]" />
       </div>
       {/* WHY CHOOSE REDPOINT? */}
-      <div className="text-center bg-[#FFFFFF] w-screen py-12 xl:py-0 xl:h-[547px] flex flex-col xl:flex-row justify-center items-center gap-4">
+      <div className="text-center bg-[#FFFFFF] w-screen py-12 xl:py-0 xl:h-[547px] flex flex-col xl:flex-row justify-center items-center gap-4 xl:gap-4">
         <img
           src={leaves}
           alt="leaves"
@@ -212,7 +212,7 @@ export default function Home() {
         />
         <div
           id="content"
-          className="w-[350px] xl:w-[1103px] flex flex-col justify-center items-center text-center gap-6"
+          className="w-[350px] md:w-[600px] xl:w-[1103px] flex flex-col justify-center items-center text-center gap-6"
         >
           <h2 className="text-2xl xl:text-3xl font-souvenir">
             Why choose Redpoint?
@@ -244,7 +244,7 @@ export default function Home() {
         <img src={spark} alt="sparkling" className="w-[87.88px] h-[82.88px]" />
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
-      <div className="w-[350px] xl:w-fit text-center flex flex-col py-24 gap-6">
+      <div className="w-[650px] xl:w-fit text-center flex flex-col py-24 gap-6 xl-gap-0">
         <h2 className="text-2xl xl:text-3xl font-souvenir">
           What's in Your Airbnb
         </h2>
@@ -295,7 +295,7 @@ export default function Home() {
           alt="cypress tree"
           className="w-[215px] absolute bottom-8 xl:right-2"
         />
-        <div className="flex flex-col gap-2 w-[350px] xl:w-[1103px]">
+        <div className="flex flex-col gap-2 w-[350px] lg:w-[650px] xl:w-[1103px]">
           <h2 className="text-2xl xl:text-3xl font-souvenir">
             Redpoint Amenities
           </h2>

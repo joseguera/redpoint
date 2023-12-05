@@ -327,7 +327,7 @@ const all = [
   useEffect(() => {
     getCurrentGellery();
     getWidth();
-  }, [width, getWidth, getCurrentGellery]);
+  }, [width, getWidth, getCurrentGellery, bathroom1]);
 
   
 
@@ -340,6 +340,7 @@ const all = [
       infiniteLoop={true}
       showStatus={false}
       showThumbs={true}
+      showIndicators={false}
       centerMode={false}
       centerSlidePercentage={100}
       width={videoDimensions.width}
@@ -351,7 +352,7 @@ const all = [
         {newGallery.map((gal) => {
             return (
               <div>
-                <img src={gal.image} alt="pic" />
+                <img src={gal.image} alt={currentGallery} />
               </div>
             );
           })}

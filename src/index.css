@@ -226,6 +226,12 @@ input {
   }
 /* } */
 
+@media (max-width: 576px) {
+  .carousel-root {
+    padding-bottom: 60px !important;
+  }
+}
+
 
 /* Attractions Dropdown Menu */
 /* Style The Dropdown Button */

@@ -77,7 +77,7 @@ export default function About() {
         id="content"
         className="bg-white w-screen flex flex-col justify-center items-center"
       >
-        <div className="flex flex-col justify-center items-center gap-10 py-10 lg:pt-24">
+        <div className="flex flex-col justify-center items-center gap-10 py-10 pb-24 lg:pt-24">
           <h2 className="text-2xl lg:text-3xl font-souvenir">Photo Gallery</h2>
 
           <div className="w-[400px] lg:w-fit text-center flex flex-col py-12 gap-6 lg:items-center">

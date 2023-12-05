@@ -135,9 +135,9 @@ export default function Home() {
   return (
     <div className="pt-14 flex flex-col justify-center items-center xl:pt-16">
       {/* SERENE MOMENTS */}
-      <div className="hero flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24 relative">
+      <div className="hero1 flex flex-col items-center justify-center h-[600px] w-screen text-center gap-24 relative">
         {/* HERO CAROUSEL */}
-        <CarouselHome />
+        {/* <CarouselHome /> */}
         {/* HERO TEXT & BUTTON */}
         <div className=" flex flex-col items-center gap-20 absolute">
           <div className="flex flex-col items-center justify-center gap-4">
@@ -244,7 +244,7 @@ export default function Home() {
         <img src={spark} alt="sparkling" className="w-[87.88px] h-[82.88px]" />
       </div>
       {/* WHAT'S IN YOUR AIRBNB */}
-      <div className="w-[650px] xl:w-fit text-center flex flex-col py-24 gap-6 xl-gap-0">
+      <div className="w-[350px] lg:w-[650px] xl:w-fit text-center flex flex-col py-24 gap-6 xl-gap-0">
         <h2 className="text-2xl xl:text-3xl font-souvenir">
           What's in Your Airbnb
         </h2>

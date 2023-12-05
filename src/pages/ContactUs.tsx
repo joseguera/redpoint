@@ -20,7 +20,7 @@ export default function ContactUs() {
           alt="butterfly"
           className="w-[78px] h-[84px] hidden xl:inline absolute top-[25rem] left-[9rem]"
         />
-        <div className="text-center flex flex-col justify-between items-center gap-16 lg:pb-48">
+        <div className="text-center flex flex-col justify-between items-center gap-16 lg:pb-48 xl:pb-6">
           <div className="flex flex-row justify-between items-center">
             <div className="w-[690px] flex flex-col justify-center items-center text-center gap-6">
               <h1 className="text-2xl lg:text-3xl font-souvenir">Contact Us</h1>

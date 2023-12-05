@@ -5,19 +5,19 @@ import FooterHero from "../components/FooterHero";
 import images from "../images/about/index";
 import butterfly1 from "../images/gifs/img_gif_about1.svg";
 import butterfly2 from "../images/gifs/img_gif_about2.svg";
-import backyard_1 from '../images/about/Backyard/backyard_1.webp';
-//   backyard_2: require("./Backyard/backyard_2.webp"),
-//   backyard_3: require("./Backyard/backyard_3.webp"),
-//   backyard_4: require("./Backyard/backyard_4.webp"),
-//   backyard_5: require("./Backyard/backyard_5.webp"),
-//   backyard_6: require("./Backyard/backyard_6.webp"),
-//   backyard_7: require("./Backyard/backyard_7.webp"),
-//   backyard_8: require("./Backyard/backyard_8.webp"),
-//   backyard_9: require("./Backyard/backyard_9.webp"),
-//   backyard_10: require("./Backyard/backyard_10.webp"),
-//   backyard_11: require("./Backyard/backyard_11.webp"),
-//   backyard_12: require("./Backyard/backyard_12.webp"),
-//   backyard_13: require("./Backyard/backyard_13.webp"),
+import backyard_1 from '../images/about/Backyard/backyard_1.webp'
+import backyard_2 from '../images/about/Backyard/backyard_2.webp'
+import backyard_3 from '../images/about/Backyard/backyard_3.webp'
+import backyard_4 from '../images/about/Backyard/backyard_4.webp'
+import backyard_5 from '../images/about/Backyard/backyard_5.webp'
+import backyard_6 from '../images/about/Backyard/backyard_6.webp'
+import backyard_7 from '../images/about/Backyard/backyard_7.webp'
+import backyard_8 from '../images/about/Backyard/backyard_8.webp'
+import backyard_9 from '../images/about/Backyard/backyard_9.webp'
+import backyard_10 from '../images/about/Backyard/backyard_10.webp'
+import backyard_11 from '../images/about/Backyard/backyard_11.webp'
+import backyard_12 from '../images/about/Backyard/backyard_12.webp'
+import backyard_13 from '../images/about/Backyard/backyard_13.webp'
 
 // const bathroom_1 = {
 // bathroom_1_1: require("./Bathroom_1/bathroom1_1.webp"),

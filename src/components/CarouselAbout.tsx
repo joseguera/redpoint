@@ -5,6 +5,19 @@ import kitchen2 from "../images/about/Kitchen/kitchen_2.webp";
 import kitchen3 from "../images/about/Kitchen/kitchen_3.webp";
 import kitchen4 from "../images/about/Kitchen/kitchen_4.webp";
 import kitchen5 from "../images/about/Kitchen/kitchen_5.webp";
+import backyard_1 from '../images/about/Backyard/backyard_1.webp'
+import backyard_2 from '../images/about/Backyard/backyard_2.webp'
+import backyard_3 from '../images/about/Backyard/backyard_3.webp'
+import backyard_4 from '../images/about/Backyard/backyard_4.webp'
+import backyard_5 from '../images/about/Backyard/backyard_5.webp'
+import backyard_6 from '../images/about/Backyard/backyard_6.webp'
+import backyard_7 from '../images/about/Backyard/backyard_7.webp'
+import backyard_8 from '../images/about/Backyard/backyard_8.webp'
+import backyard_9 from '../images/about/Backyard/backyard_9.webp'
+import backyard_10 from '../images/about/Backyard/backyard_10.webp'
+import backyard_11 from '../images/about/Backyard/backyard_11.webp'
+import backyard_12 from '../images/about/Backyard/backyard_12.webp'
+import backyard_13 from '../images/about/Backyard/backyard_13.webp'
 const ReactDOM = require("react-dom");
 const Carousel = require("react-responsive-carousel").Carousel;
 
@@ -20,6 +33,22 @@ const CarouselAbout: React.FC<CarouselAboutProps> = ({ newGallery }) => {
     { image: kitchen4 },
     { image: kitchen5 },
   ];
+
+  const backyard = [
+    { image: backyard_1 },
+    { image: backyard_2 },
+    { image: backyard_3 },
+    { image: backyard_4 },
+    { image: backyard_5 },
+    { image: backyard_6 },
+    { image: backyard_7 },
+    { image: backyard_8 },
+    { image: backyard_9 },
+    { image: backyard_10 },
+    { image: backyard_11 },
+    { image: backyard_12 },
+    { image: backyard_13 }
+];
 
   const [videoDimensions, setVideoDimensions] = useState({
     width: 980,
@@ -78,23 +107,9 @@ const CarouselAbout: React.FC<CarouselAboutProps> = ({ newGallery }) => {
       thumbWidth={videoDimensions.height}
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={80}
+      dynamicHeight={true}
     >
-      {/* {newGallery?.length
-        ? newGallery.map((gal) => {
-            return (
-              <div>
-                <img src={gal.image} alt="pic" />
-              </div>
-            );
-          })
-        : currentGallery.map((gal) => {
-            return (
-              <div>
-                <img src={gal.image} alt="pic" />
-              </div>
-            );
-          })} */}
-        {currentGallery.map((gal) => {
+        {backyard.map((gal) => {
             return (
               <div>
                 <img src={gal.image} alt="pic" />

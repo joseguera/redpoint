@@ -96,7 +96,7 @@ export default function ContactUs() {
         <img
           src={tree_lights}
           alt="tree lights"
-          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[28rem] md:right-[13.5rem] lg:-bottom-[20rem] lg:right-[20rem] xl:top-[34.5rem] xl:right-[1rem]"
+          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[28rem] md:right-[13.5rem] an:top-[58rem] an:right-[15rem] lg:-bottom-[20rem] lg:right-[20rem] xl:top-[34.5rem] xl:right-[1rem]"
         />
       </div>
       <FooterHero

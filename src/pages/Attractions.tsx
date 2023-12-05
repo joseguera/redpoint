@@ -19,32 +19,6 @@ export default function Attractions() {
     setActivity("all")
       window.scrollTo(0, 0)
   }, [])
- 
-  ///////////////////////////////////////////////////
-  ////////// ATTRACTIONS BUTTONS LOGIC //////////////
-  ///////////////////////////////////////////////////
-
-  // const words = [
-  //   { name: 'spray', clicked: true },
-  //   { name: 'elite', clicked: true },
-  //   { name: 'exuberant', clicked: true },
-  //   { name: 'destruction', clicked: true },
-  //   { name: 'present', clicked: false }
-  // ];
-  
-  // function result(name) {
-  //   let newWords = [];
-  //     words.map(word => {
-  //       if (name === word.name) {
-  //         word.clicked = true;
-  //       } else {
-  //         word.clicked = false;
-  //       }
-  //     })
-  //     return words;
-  // }
-  
-  // console.log(result('present'));
 
   return (
     <div className="flex flex-col justify-center items-center gap-10 lg:gap-24 pt-14 static">
@@ -118,7 +92,7 @@ export default function Attractions() {
                       {attraction.location}
                     </p>
                     <p
-                      className="text-base lg:text-lg w-[350px] lg:w-[1103px]"
+                      className="text-base lg:text-lg w-[350px] lg:w-[650px] xl:w-[1103px]"
                       dangerouslySetInnerHTML={{
                         __html: attraction.description,
                       }}
@@ -151,19 +125,19 @@ export default function Attractions() {
                     {attraction.location}
                   </p>
                   <p
-                    className="text-base lg:text-lg w-[350px] lg:w-[1103px]"
+                    className="text-base lg:text-lg w-[350px] md:w-[600px] lg:w-[850px] xl:w-[1103px]"
                     dangerouslySetInnerHTML={{ __html: attraction.description }}
                   ></p>
                   <div className="flex flex-col lg:flex-row gap-6 lg:gap-0">
                     <img
                       src={attraction.images[0]}
                       alt={attraction.name}
-                      className="w-[382px] lg:w-[568px]"
+                      className="w-[382px] md:w-[500px] lg:w-[568px]"
                     />
                     <img
                       src={attraction.images[1]}
                       alt={attraction.name}
-                      className="w-[382px] lg:w-[568px]"
+                      className="w-[382px] md:w-[500px] lg:w-[568px]"
                     />
                   </div>
                 </div>

@@ -88,10 +88,10 @@ export default function Reviews() {
                 <p>View all reviews</p>
               </div>
             </a>
-            <div className="md:hidden lg:hidden w-[265px] text-center flex flex-col py-12 gap-6">
+            <div className="w-[265px] text-center flex flex-col py-12 gap-6">
               <div className="flex flex-row lg:flex-col gap-10 w-full overflow-auto">
                 <div className="flex flex-row lg:flex-col">
-                  <div className="flex flex-col items-center gap-2 border-[#DDDDDD] border-r-2 pr-8">
+                  <div className="flex flex-col items-center gap-2 border-[#DDDDDD] border-r-2 pr-8 lg:pr-0 lg:border-0">
                     <p className="font-extrabold">Overall Rating</p>
                     {overallRatings.map((rating) => {
                       return (
@@ -115,7 +115,7 @@ export default function Reviews() {
                     })}
                   </div>
                   {/* MOBILE SCORES */}
-                  <div className="flex flex-row gap-4 px-4">
+                  <div className="md:hidden lg:hidden flex flex-row gap-4 px-4">
                     {scores.map((score) => {
                       return (
                         <div

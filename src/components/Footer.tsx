@@ -11,18 +11,18 @@ export default function Footer() {
   
   return (
     <div className="p-5 bg-[#000A14] text-white flex flex-col justify-center items-center w-screen gap-8 lg:gap-0">
-      <div className="pt-[12px] lg:pt-[12px] flex flex-row items-center">
+      <Link to="/" className="pt-[12px] lg:pt-[12px] flex flex-row items-center">
         <img
           className="w-[152px] h-[45px] lg:w-[216px]"
           src={logo}
           alt="logo"
         />
-      </div>
+      </Link>
       <div className="border-b border-[#29303C] w-full lg:mt-5"></div>
 
-      <div className="flex flex-col justify-start gap-12">
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center lg:justify-start gap-8">
-        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0">
+      <div className="lg:h-[267px] flex flex-col justify-start gap-12 lg:items-start lg:-ml-16">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:justify-start gap-8 lg:gap-20 xl:gap-[10rem] 2xl:gap-[8rem]">
+        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 lg:mt-8">
           <p className="text-lg lg:mb-5 lg:text-ml font-black">Email us at</p>
           <a
             href="mailto:redpoint@mixtrip.com"
@@ -31,12 +31,12 @@ export default function Footer() {
             redpoint@mixtrip.com
           </a>
         </div>
-        <img src={vertical_line} alt="separator" />
+        <img className="hidden lg:inline " src={vertical_line} alt="separator" />
         <div className="w-fit flex flex-col justify-center items-start">
-          <div className="flex flex-col justify-center items-start gap-4 lg:gap-0">
+          <div className="flex flex-col justify-center items-start gap-4 lg:-ml-12 xl:gap-0 xl:mx-12 xl:-ml-24 lg:mt-8">
             <p className="text-lg lg:mb-5 lg:text-ml font-black">All pages</p>
-            <div className="flex flex-col lg:flex-row justify-between items-start w-64 gap-24">
-              <div className="flex flex-col justify-start items-start gap-4">
+            <div className="flex flex-col lg:flex-row justify-between items-start w-64 gap-2 lg:gap-16 xl:gap-24">
+              <div className="flex flex-col justify-start items-start gap-2 lg:gap-4">
                 <Link className="text-base lg:text-lg text-[#A7B1BE]" to="/">
                   Home
                 </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
                   About
                 </Link>
               </div>
-              <div className="flex flex-col justify-start items-start gap-4">
+              <div className="flex flex-col justify-start items-start gap-2 lg:gap-4">
                 <Link
                   className="text-base lg:text-lg text-[#A7B1BE]"
                   to="/attractions"
@@ -61,7 +61,7 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </div>
-              <div className="flex flex-col justify-start items-start">
+              <div className="flex flex-col justify-start items-start gap-2">
                 <Link
                   className="text-base lg:text-lg text-[#A7B1BE]"
                   to="/reviews"
@@ -72,8 +72,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <img src={vertical_line} alt="separator" />
-        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0">
+        <img className="hidden lg:inline" src={vertical_line} alt="separator" />
+        <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 lg:-ml-16 2xl:-ml-24 3xl:-ml-20 lg:mt-8">
           <p className="text-lg lg:mb-5 lg:text-ml font-black">Social media</p>
           <a
             href="https://www.instagram.com/redpoint_mixtrip"

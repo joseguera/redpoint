@@ -22,11 +22,11 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 lg:gap-10 z-20 drop-shadow-lg">
-        <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="w-[45px] pl-4 lg:pl-0 lg:hidden transition duration-500 ease-in-out">
+      <div className="fixed bg-[#F7F4F2] h-14 lg:h-16 w-full flex flex-row justify-between items-center gap-10 xl:gap-2 z-20 drop-shadow-lg">
+        <div onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="w-[45px] pl-4 xl:pl-0 xl:hidden transition duration-500 ease-in-out">
           <img
             src={mobileMenuOpen ? x_closer : burger}
-            className={`${mobileMenuOpen ? "w-[16px] h-[16px]" : "w-[24px] h-[15px]"}`}
+            className={`${mobileMenuOpen ? "w-[16px] h-[16px] lg:w-[20px] lg:h-[20px]" : "w-[24px] h-[15px] w-[28px] h-[19px]"}`}
             alt="open menu"
           />
         </div>
@@ -35,11 +35,11 @@ export default function Header() {
             <img
               src={logo}
               alt="redpoint logo"
-              className="w-[182.25px] h-[54px] absolute left-10 lg:left-0 lg:w-[350px] lg:h-[104px]"
+              className="w-[182.25px] h-[54px] xl:static absolute left-10 lg:left-12 lg:w-[250px] lg:h-[74px] xl:pl-7 xl:w-[450px] lg:h-[133px]"
             />
           </Link>
         </div>
-        <div className="hidden lg:flex flex-row justify-center items-center h-16">
+        <div className="hidden xl:flex flex-row justify-center items-center h-16">
           <Link
             to="/"
             className="w-[180px] h-full flex flex-row justify-center items-center hover:bg-[#FFFFFF] hover:cursor-pointer"
@@ -72,7 +72,7 @@ export default function Header() {
           </Link>
         </div>
         <a
-          className="text-base lg:text-lg font-black w-[140px] md:w-[209px] h-full bg-[#D33F3F] text-white flex flex-row justify-center items-center font-black"
+          className="text-base lg:text-lg font-black w-[140px] xl:w-[350px] md:w-[209px] h-full bg-[#D33F3F] hover:bg-[#923727] text-white flex flex-row justify-center items-center font-black"
           href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2"
           target="_blank"
           rel="noreferrer"
@@ -82,7 +82,7 @@ export default function Header() {
       </div>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" onClick={() => setMobileMenuOpen(false)}>
+        <div className="xl:hidden" onClick={() => setMobileMenuOpen(false)}>
           <div className="fixed inset-0 z-10" />
           
           {/* MODAL BODY */}

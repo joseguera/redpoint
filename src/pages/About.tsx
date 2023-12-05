@@ -64,12 +64,12 @@ export default function About() {
         id="content"
         className="bg-white w-screen flex flex-col justify-center items-center"
       >
-        <div className="flex flex-col justify-center items-center gap-10 py-10 lg:py-24">
+        <div className="flex flex-col justify-center items-center gap-10 py-10 lg:pt-24">
           <h2 className="text-2xl lg:text-3xl font-souvenir">Photo Gallery</h2>
 
-          <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 lg:py-24 gap-6">
-            <div className="flex flex-row gap-10 w-full overflow-auto">
-              <div className="flex flex-row lg:flex-wrap gap-2 lg:gap-4 lg:p-20">
+          <div className="w-[350px] lg:w-fit text-center flex flex-col py-12 gap-6 lg:items-center">
+            <div className="flex flex-row gap-10 xl:pl-[40px] 2xl:pl-[60px] w-full lg:w-11/12 overflow-auto">
+              <div className="flex flex-row lg:flex-wrap gap-2 lg:gap-4">
                 {galleryButtons.map((button) => {
                   return (
                     <div

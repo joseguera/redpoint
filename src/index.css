@@ -13,6 +13,7 @@
 }
 
 html, body {
+  height: 100%;
   margin: 0;
   font-family: 'avenir', 'Helvetica Neue', sans-serif;
   font-size: 20px;
@@ -28,10 +29,18 @@ input {
   all: unset;
 }
 
-/* Page Heros */
+/* Home Page Heros */
 
-.hero {
+.hero1 {
   background-image: url('../src/images/home_heroimage_1.png');
+
+}
+.hero2 {
+  background-image: url('../src/images/home_heroimage_2.png');
+}
+
+.hero3 {
+  background-image: url('../src/images/home_heroimage_3.png');
 }
 
 .attractions-hero {
@@ -72,7 +81,9 @@ input {
   background-image: url('../src/images/img_contactus_bookredpoint\ 1.png');
 }
 
-.hero,
+.hero1,
+.hero2,
+.hero3,
 .attractions-hero,
 .reviews-hero,
 .about-hero,
@@ -87,7 +98,10 @@ input {
   background-position: 50% 0;
 }
 
-
+.image-center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
 
 /* CENTER OVERSIZED IMAGE */
 /* 
@@ -195,13 +209,6 @@ input {
 }
 
 /* Carousel Styles */
-.thumbs-wrapper, .axis-vertical {
-  overflow: hidden !important;
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: start !important;
-  flex-wrap: wrap !important;
-}
 
 .carousel .thumb.selected {
   border: 5px solid #D33F3F !important;
@@ -211,6 +218,9 @@ input {
   border: 3px solid #D33F3F !important;
 }
 
+  
+
+@media (max-width: 576px) {
   .carousel-root {
     overflow: auto !important;
     width: 100%;
@@ -219,6 +229,8 @@ input {
     justify-content: center;
     align-items: center;
   }
+}
+
 
 /* Attractions Dropdown Menu */
 /* Style The Dropdown Button */

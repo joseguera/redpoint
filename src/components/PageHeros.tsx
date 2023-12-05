@@ -6,7 +6,7 @@ interface PageHerosProps {
 
 const PageHeros: React.FC<PageHerosProps> = ({ heroImage }) => {
   return (
-    <div className={`${heroImage} flex flex-col items-center justify-center h-[320px] w-full lg:w-screen text-center gap-24`}></div>
+    <div className={`${heroImage} flex flex-col items-center justify-center h-[320px] lg:w-screen text-center gap-24`}></div>
   )
 }
 

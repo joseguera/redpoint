@@ -47,7 +47,7 @@ export default function Attractions() {
   // console.log(result('present'));
 
   return (
-    <div className="flex flex-col justify-center items-center gap-16 lg:gap-24 pt-14 static">
+    <div className="flex flex-col justify-center items-center gap-10 lg:gap-24 pt-14 static">
       <PageHeros heroImage="attractions-hero" />
       <div
         id="content"
@@ -111,7 +111,7 @@ export default function Attractions() {
                     key={attraction.id}
                     className="flex flex-col items-center justify-center text-center gap-6"
                   >
-                    <h3 className="text-lg lg:text-ml w-[350px] font-black">
+                    <h3 className="text-lg w-[350px] font-black">
                       {attraction.name}
                     </h3>
                     <p className="text-base lg:text-lg text-[#9393B0] italic">
@@ -154,7 +154,7 @@ export default function Attractions() {
                     className="text-base lg:text-lg w-[350px] lg:w-[1103px]"
                     dangerouslySetInnerHTML={{ __html: attraction.description }}
                   ></p>
-                  <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-0">
                     <img
                       src={attraction.images[0]}
                       alt={attraction.name}

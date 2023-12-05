@@ -98,11 +98,6 @@ input {
   background-position: 50% 0;
 }
 
-.image-center {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
 /* CENTER OVERSIZED IMAGE */
 /* 
   will apply styles only if your browser's viewport width
@@ -220,7 +215,7 @@ input {
 
   
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) { */
   .carousel-root {
     overflow: auto !important;
     width: 100%;
@@ -229,7 +224,7 @@ input {
     justify-content: center;
     align-items: center;
   }
-}
+/* } */
 
 
 /* Attractions Dropdown Menu */

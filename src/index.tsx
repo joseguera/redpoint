@@ -22,6 +22,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/redpoint",
+        element: <Home />,
+      },
+      {
         path: "/about",
         element: <About />,
       },

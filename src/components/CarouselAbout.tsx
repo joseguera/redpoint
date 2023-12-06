@@ -345,7 +345,7 @@ const all = [
       centerSlidePercentage={100}
       width={videoDimensions.width}
       thumbWidth={videoDimensions.height}
-      preventMovementUntilSwipeScrollTolerance={true}
+      preventMovementUntilSwipeScrollTolerance={false}
       swipeScrollTolerance={80}
       dynamicHeight={false}
     >

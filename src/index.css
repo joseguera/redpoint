@@ -96,7 +96,6 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   /* Center Vertically */
-  /* background-position: 0 50%; */
   /* Center Horizontally */
   background-position: 50% 0;
 }
@@ -106,11 +105,10 @@ input {
   will apply styles only if your browser's viewport width
   is equal to or narrower than 1250px
 */
-@media (max-width: 576px) {
-  /* .attractions-hero {
-    background-image: url('../src/images/page-heros/img_header_attractions.webp');
-    
-  } */
+@media (min-width: 2560px) {
+  .attractions-hero { 
+    background-position: 0 50%;
+  }
 }
 
 /* FOOTER MEDIA QUERIES FOR ALL SCREENS */

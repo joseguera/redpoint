@@ -96,6 +96,7 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 0;
+  background-position: 0 50%;
 }
 
 /* CENTER OVERSIZED IMAGE */
@@ -223,14 +224,14 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px !important;
+
   }
 /* } */
 
-@media (max-width: 576px) {
-  .carousel-root {
-    padding-bottom: 60px !important;
-  }
-}
+/* @media (max-width: 576px) {
+
+} */
 
 
 /* Attractions Dropdown Menu */

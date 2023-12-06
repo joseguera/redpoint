@@ -347,7 +347,7 @@ const all = [
       thumbWidth={videoDimensions.height}
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={80}
-      dynamicHeight={true}
+      dynamicHeight={false}
     >
         {newGallery.map((gal) => {
             return (

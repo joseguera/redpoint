@@ -8,6 +8,7 @@ import view from "../images/icons/link-out_svgrepo.com.svg";
 import wing1 from "../images/wing1.svg";
 import wing2 from "../images/wing2.svg";
 import search from "../images/icons/search_svgrepo.com.svg";
+import horizontal_line from '../images/icons/horizontal_divider.svg';
 
 interface UserEntry {
   name: string;
@@ -55,7 +56,7 @@ export default function Reviews() {
       <PageHeros heroImage="reviews-hero" />
       <div className="flex flex-col gap-10">
         {/* HEADING */}
-        <div id="content" className="flex flex-col items-center">
+        <div id="content" className="flex flex-col items-center gap-6">
           <h1 className="text-2xl lg:text-3xl font-souvenir">Reviews</h1>
           <p className="text-base text-lg">See what our guests are saying.</p>
         </div>
@@ -138,22 +139,26 @@ export default function Reviews() {
                 </div>
               </div>
               {/* DESKTOP SCORES */}
-              <div className="hidden lg:inline">
+              <div className="hidden lg:inline ">
                 {scores.map((score) => {
                   return (
+                    
                     <div
                       key={score.category}
-                      className="w-[279px] h-10 flex flex-row justify-between"
+                      className="w-[279px] flex flex-col justify-between"
                     >
-                      <div className="flex flex-row justify-between gap-4 items-center">
-                        <div className="w-6 h-6">
-                          <img src={score.icon} alt={score.category} />
+                      <div className="flex flex-row justify-between">
+                        <div className="flex flex-row gap-4 items-center">
+                          <div className="w-6 h-6">
+                            <img src={score.icon} alt={score.category} />
+                          </div>
+                          <div className="text-[16px]">{score.category}</div>
                         </div>
-                        <div className="text-[16px]">{score.category}</div>
+                        <div className="text-[16px] flex items-center">
+                          {score.rating}
+                        </div>
                       </div>
-                      <div className="text-[16px] flex items-center">
-                        {score.rating}
-                      </div>
+                      <img src={horizontal_line} alt="line" className="py-4" />
                     </div>
                   );
                 })}

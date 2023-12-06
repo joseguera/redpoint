@@ -72,7 +72,7 @@ export default function Header() {
           </Link>
         </div>
         <a
-          className="text-base lg:text-lg font-black w-[140px] xl:w-[350px] md:w-[209px] h-full bg-[#D33F3F] hover:bg-[#923727] text-white flex flex-row justify-center items-center font-black"
+          className="text-base lg:text-lg font-black w-[140px] xl:w-[350px] md:w-[209px] h-full bg-[#D33F3F] hover:bg-[#923727] text-white text-center flex flex-row justify-center items-center font-black"
           href="https://www.airbnb.com/rooms/786240811671591724?source_impression_id=p3_1699644961_8xGAbJ7xCskTo16v&locale=en&_set_bev_on_new_domain=1699646256_ZjY5ZjQ4NTUzOGE2"
           target="_blank"
           rel="noreferrer"
@@ -87,7 +87,7 @@ export default function Header() {
           
           {/* MODAL BODY */}
           <div
-            className={`fixed h-screen overflow-auto font-inter inset-y-0 w-3/4 left-0 z-10 overflow-y-clip bg-[#F7F4F2] py-6 pt-16 max-w-md sm:max-w-md sm:ring-1 sm:ring-gray-900/10`}
+            className={`fixed h-screen overflow-auto font-inter inset-y-0 w-[67.1%] sm:w-[78.1%] md:w-[72.8%] lg:w-[79.6%] left-0 z-10 overflow-y-clip bg-[#F7F4F2] py-6 pt-16 drop-shadow-2xl`}
           >
            <div>
             {menuOptions.map(options => {
@@ -102,7 +102,7 @@ export default function Header() {
                     <img src={arrow} alt="arrow" />
                   </div>
                 </Link>
-                <div className="w-[242px] h-[1px] bg-[#DDDDDD] self-center"></div>
+                <div className="w-[242px] h-[1px] md:w-[90%] lg:w-[93%] bg-[#DDDDDD] self-center"></div>
                 </div>
               )
             })} 

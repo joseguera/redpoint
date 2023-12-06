@@ -197,7 +197,7 @@ export default function Home() {
             </Link>
           </p>
           <p className="text-base xl:text-lg">
-            <span className="text-[#D33F3F]">Unmatched luxury at an affordable price</span>,
+            <span className="text-[#D33F3F] font-bold">Unmatched luxury at an affordable price</span>,
             start your dream trip from Redpoint!
           </p>
         </div>

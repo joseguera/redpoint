@@ -95,8 +95,10 @@ input {
 .contact-footer {
   background-repeat: no-repeat;
   background-size: cover;
+  /* Center Vertically */
+  /* background-position: 0 50%; */
+  /* Center Horizontally */
   background-position: 50% 0;
-  background-position: 0 50%;
 }
 
 /* CENTER OVERSIZED IMAGE */

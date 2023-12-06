@@ -74,7 +74,7 @@ export default function ContactUs() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pb-60 lg:pb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pb-48 lg:pb-0">
             <a
               href="mailto:redpoint@mixtrip.com"
               className="w-[350px] lg:w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"
@@ -96,7 +96,7 @@ export default function ContactUs() {
         <img
           src={tree_lights}
           alt="tree lights"
-          className="w-[219px] absolute -bottom-[32rem] right-24 md:-bottom-[28rem] md:right-[13.5rem] an:top-[58rem] an:right-[15rem] lg:-bottom-[20rem] lg:right-[20rem] xl:top-[34.5rem] xl:right-[1rem]"
+          className="w-[219px] absolute top-[56rem] right-[5rem] md:top-[55.5rem] md:right-[15.5rem] lg:top-[48rem] lg:right-[25rem] xl:top-[34.5rem] xl:right-[1rem]"
         />
       </div>
       <FooterHero

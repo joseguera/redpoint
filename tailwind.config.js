@@ -20,6 +20,9 @@ module.exports = {
         // '4xl': '2.441rem',
         // '5xl': '3.052rem',
       },
+      zIndex: {
+        '100': '100',
+      },
       screens: {
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
@@ -28,6 +31,7 @@ module.exports = {
         // => @media (min-width: 768px) { ... }
 
         'an': '800px',
+        // => annoying in-between screen size :P
   
         'lg': '1024px',
         // => @media (min-width: 1024px) { ... }

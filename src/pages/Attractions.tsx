@@ -75,7 +75,7 @@ export default function Attractions() {
         </div>
       </div>
       {/* ATTRACTION COMPONENT */}
-      <div className="flex flex-col items-center justify-center gap-24 h-full">
+      <div className="flex flex-col items-center justify-start gap-24 h-full">
         {activity !== "all"
           ? attractions
               .filter((attraction) => attraction.type === activity)
@@ -85,7 +85,7 @@ export default function Attractions() {
                     key={attraction.id}
                     className="flex flex-col items-center justify-center text-center gap-6"
                   >
-                    <h3 className="text-lg w-[350px] font-black">
+                    <h3 className="text-lg lg:text-ml w-[350px] font-black">
                       {attraction.name}
                     </h3>
                     <p className="text-base lg:text-lg text-[#9393B0] italic">
@@ -97,7 +97,7 @@ export default function Attractions() {
                         __html: attraction.description,
                       }}
                     ></p>
-                    <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex flex-col lg:flex-row gap-6 lg:gap-0">
                       <img
                         src={attraction.images[0]}
                         alt={attraction.name}
@@ -132,12 +132,12 @@ export default function Attractions() {
                     <img
                       src={attraction.images[0]}
                       alt={attraction.name}
-                      className="w-[382px] md:w-[500px] lg:w-[568px]"
+                      className="w-[382px] md:w-[500px] xl:w-[568px]"
                     />
                     <img
                       src={attraction.images[1]}
                       alt={attraction.name}
-                      className="w-[382px] md:w-[500px] lg:w-[568px]"
+                      className="w-[382px] md:w-[500px] xl:w-[568px]"
                     />
                   </div>
                 </div>

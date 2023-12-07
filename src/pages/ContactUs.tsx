@@ -36,12 +36,12 @@ export default function ContactUs() {
                 , and we'll get back to you as soon as possible! Visit our
                 instagram{" "}
                 <a
-                  href="https://www.instagram.com/redpoint_mixtrip"
+                  href="https://www.instagram.com/redpoint_joshuatree"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#D33F3F] font-bold"
                 >
-                  redpoint_mixtrip
+                  redpoint_joshuatree
                 </a>{" "}
                 to get updates of Redpoint!
               </p>
@@ -63,12 +63,12 @@ export default function ContactUs() {
                 Visit our
                 instagram{" "}
                 <a
-                  href="https://www.instagram.com/redpoint_mixtrip"
+                  href="https://www.instagram.com/redpoint_joshuatree"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[#D33F3F] font-bold"
                 >
-                  redpoint_mixtrip
+                  redpoint_joshuatree
                 </a>{" "}
                 to get updates of Redpoint!
               </p>
@@ -83,7 +83,7 @@ export default function ContactUs() {
               Email us now
             </a>
             <a
-              href="https://www.instagram.com/redpoint_mixtrip"
+              href="https://www.instagram.com/redpoint_joshuatree"
               target="_blank"
               rel="noreferrer"
               className="w-[350px] lg:w-[240px] h-[61px] bg-white border border-[#272728] font-black flex flex-row justify-center items-center gap-3"

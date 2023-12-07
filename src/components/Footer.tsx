@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="w-fit flex flex-col justify-center items-start gap-4 lg:gap-0 xl:-ml-12 2xl:-ml-24 3xl:-ml-20 lg:mt-8">
           <p className="text-lg lg:mb-5 lg:text-ml font-black">Social media</p>
           <a
-            href="https://www.instagram.com/redpoint_mixtrip"
+            href="https://www.instagram.com/redpoint_joshuatree"
             target="_blank"
             rel="noreferrer"
           >
